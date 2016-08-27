@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50B049251D722E8D009E8973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049241D722E8D009E8973 /* AppDelegate.swift */; };
+		50B049271D722E8D009E8973 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049261D722E8D009E8973 /* ViewController.swift */; };
+		50B0492A1D722E8D009E8973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B049281D722E8D009E8973 /* Main.storyboard */; };
+		50B0492C1D722E8D009E8973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B0492B1D722E8D009E8973 /* Assets.xcassets */; };
+		50B0492F1D722E8D009E8973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B0492D1D722E8D009E8973 /* LaunchScreen.storyboard */; };
+		50B0493A1D722E8D009E8973 /* DouBanRadioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049391D722E8D009E8973 /* DouBanRadioTests.swift */; };
+		50B049451D722E8D009E8973 /* DouBanRadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049441D722E8D009E8973 /* DouBanRadioUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50B049361D722E8D009E8973 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50B049191D722E8C009E8973 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B049201D722E8C009E8973;
+			remoteInfo = DouBanRadio;
+		};
+		50B049411D722E8D009E8973 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50B049191D722E8C009E8973 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B049201D722E8C009E8973;
+			remoteInfo = DouBanRadio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		50B049211D722E8C009E8973 /* DouBanRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouBanRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B049241D722E8D009E8973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50B049261D722E8D009E8973 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50B049291D722E8D009E8973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50B0492B1D722E8D009E8973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50B0492E1D722E8D009E8973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		50B049301D722E8D009E8973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50B049351D722E8D009E8973 /* DouBanRadioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouBanRadioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B049391D722E8D009E8973 /* DouBanRadioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanRadioTests.swift; sourceTree = "<group>"; };
+		50B0493B1D722E8D009E8973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50B049401D722E8D009E8973 /* DouBanRadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouBanRadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B049441D722E8D009E8973 /* DouBanRadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanRadioUITests.swift; sourceTree = "<group>"; };
+		50B049461D722E8D009E8973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50B0491E1D722E8C009E8973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B049321D722E8D009E8973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B0493D1D722E8D009E8973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50B049181D722E8C009E8973 = {
+			isa = PBXGroup;
+			children = (
+				50B049231D722E8D009E8973 /* DouBanRadio */,
+				50B049381D722E8D009E8973 /* DouBanRadioTests */,
+				50B049431D722E8D009E8973 /* DouBanRadioUITests */,
+				50B049221D722E8C009E8973 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50B049221D722E8C009E8973 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50B049211D722E8C009E8973 /* DouBanRadio.app */,
+				50B049351D722E8D009E8973 /* DouBanRadioTests.xctest */,
+				50B049401D722E8D009E8973 /* DouBanRadioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50B049231D722E8D009E8973 /* DouBanRadio */ = {
+			isa = PBXGroup;
+			children = (
+				50B049241D722E8D009E8973 /* AppDelegate.swift */,
+				50B049261D722E8D009E8973 /* ViewController.swift */,
+				50B049281D722E8D009E8973 /* Main.storyboard */,
+				50B0492B1D722E8D009E8973 /* Assets.xcassets */,
+				50B0492D1D722E8D009E8973 /* LaunchScreen.storyboard */,
+				50B049301D722E8D009E8973 /* Info.plist */,
+			);
+			path = DouBanRadio;
+			sourceTree = "<group>";
+		};
+		50B049381D722E8D009E8973 /* DouBanRadioTests */ = {
+			isa = PBXGroup;
+			children = (
+				50B049391D722E8D009E8973 /* DouBanRadioTests.swift */,
+				50B0493B1D722E8D009E8973 /* Info.plist */,
+			);
+			path = DouBanRadioTests;
+			sourceTree = "<group>";
+		};
+		50B049431D722E8D009E8973 /* DouBanRadioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				50B049441D722E8D009E8973 /* DouBanRadioUITests.swift */,
+				50B049461D722E8D009E8973 /* Info.plist */,
+			);
+			path = DouBanRadioUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50B049201D722E8C009E8973 /* DouBanRadio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50B049491D722E8D009E8973 /* Build configuration list for PBXNativeTarget "DouBanRadio" */;
+			buildPhases = (
+				50B0491D1D722E8C009E8973 /* Sources */,
+				50B0491E1D722E8C009E8973 /* Frameworks */,
+				50B0491F1D722E8C009E8973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DouBanRadio;
+			productName = DouBanRadio;
+			productReference = 50B049211D722E8C009E8973 /* DouBanRadio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50B049341D722E8D009E8973 /* DouBanRadioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50B0494C1D722E8D009E8973 /* Build configuration list for PBXNativeTarget "DouBanRadioTests" */;
+			buildPhases = (
+				50B049311D722E8D009E8973 /* Sources */,
+				50B049321D722E8D009E8973 /* Frameworks */,
+				50B049331D722E8D009E8973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50B049371D722E8D009E8973 /* PBXTargetDependency */,
+			);
+			name = DouBanRadioTests;
+			productName = DouBanRadioTests;
+			productReference = 50B049351D722E8D009E8973 /* DouBanRadioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		50B0493F1D722E8D009E8973 /* DouBanRadioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50B0494F1D722E8D009E8973 /* Build configuration list for PBXNativeTarget "DouBanRadioUITests" */;
+			buildPhases = (
+				50B0493C1D722E8D009E8973 /* Sources */,
+				50B0493D1D722E8D009E8973 /* Frameworks */,
+				50B0493E1D722E8D009E8973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50B049421D722E8D009E8973 /* PBXTargetDependency */,
+			);
+			name = DouBanRadioUITests;
+			productName = DouBanRadioUITests;
+			productReference = 50B049401D722E8D009E8973 /* DouBanRadioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50B049191D722E8C009E8973 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = WENGzhang;
+				TargetAttributes = {
+					50B049201D722E8C009E8973 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = DSK8GZBUF3;
+					};
+					50B049341D722E8D009E8973 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = DSK8GZBUF3;
+						TestTargetID = 50B049201D722E8C009E8973;
+					};
+					50B0493F1D722E8D009E8973 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = DSK8GZBUF3;
+						TestTargetID = 50B049201D722E8C009E8973;
+					};
+				};
+			};
+			buildConfigurationList = 50B0491C1D722E8C009E8973 /* Build configuration list for PBXProject "DouBanRadio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50B049181D722E8C009E8973;
+			productRefGroup = 50B049221D722E8C009E8973 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50B049201D722E8C009E8973 /* DouBanRadio */,
+				50B049341D722E8D009E8973 /* DouBanRadioTests */,
+				50B0493F1D722E8D009E8973 /* DouBanRadioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50B0491F1D722E8C009E8973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B0492F1D722E8D009E8973 /* LaunchScreen.storyboard in Resources */,
+				50B0492C1D722E8D009E8973 /* Assets.xcassets in Resources */,
+				50B0492A1D722E8D009E8973 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B049331D722E8D009E8973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B0493E1D722E8D009E8973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50B0491D1D722E8C009E8973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B049271D722E8D009E8973 /* ViewController.swift in Sources */,
+				50B049251D722E8D009E8973 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B049311D722E8D009E8973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B0493A1D722E8D009E8973 /* DouBanRadioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B0493C1D722E8D009E8973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50B049451D722E8D009E8973 /* DouBanRadioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50B049371D722E8D009E8973 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50B049201D722E8C009E8973 /* DouBanRadio */;
+			targetProxy = 50B049361D722E8D009E8973 /* PBXContainerItemProxy */;
+		};
+		50B049421D722E8D009E8973 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50B049201D722E8C009E8973 /* DouBanRadio */;
+			targetProxy = 50B049411D722E8D009E8973 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50B049281D722E8D009E8973 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50B049291D722E8D009E8973 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		50B0492D1D722E8D009E8973 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50B0492E1D722E8D009E8973 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50B049471D722E8D009E8973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		50B049481D722E8D009E8973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50B0494A1D722E8D009E8973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DouBanRadio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wengzhang.DouBanRadio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		50B0494B1D722E8D009E8973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DouBanRadio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wengzhang.DouBanRadio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		50B0494D1D722E8D009E8973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DouBanRadioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wengzhang.DouBanRadioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DouBanRadio.app/DouBanRadio";
+			};
+			name = Debug;
+		};
+		50B0494E1D722E8D009E8973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DouBanRadioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wengzhang.DouBanRadioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DouBanRadio.app/DouBanRadio";
+			};
+			name = Release;
+		};
+		50B049501D722E8D009E8973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DouBanRadioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wengzhang.DouBanRadioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DouBanRadio;
+			};
+			name = Debug;
+		};
+		50B049511D722E8D009E8973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DouBanRadioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wengzhang.DouBanRadioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DouBanRadio;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50B0491C1D722E8C009E8973 /* Build configuration list for PBXProject "DouBanRadio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50B049471D722E8D009E8973 /* Debug */,
+				50B049481D722E8D009E8973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50B049491D722E8D009E8973 /* Build configuration list for PBXNativeTarget "DouBanRadio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50B0494A1D722E8D009E8973 /* Debug */,
+				50B0494B1D722E8D009E8973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		50B0494C1D722E8D009E8973 /* Build configuration list for PBXNativeTarget "DouBanRadioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50B0494D1D722E8D009E8973 /* Debug */,
+				50B0494E1D722E8D009E8973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		50B0494F1D722E8D009E8973 /* Build configuration list for PBXNativeTarget "DouBanRadioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50B049501D722E8D009E8973 /* Debug */,
+				50B049511D722E8D009E8973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50B049191D722E8C009E8973 /* Project object */;
+}
