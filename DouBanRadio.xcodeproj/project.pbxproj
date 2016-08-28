@@ -14,6 +14,7 @@
 		50B0492F1D722E8D009E8973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B0492D1D722E8D009E8973 /* LaunchScreen.storyboard */; };
 		50B0493A1D722E8D009E8973 /* DouBanRadioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049391D722E8D009E8973 /* DouBanRadioTests.swift */; };
 		50B049451D722E8D009E8973 /* DouBanRadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049441D722E8D009E8973 /* DouBanRadioUITests.swift */; };
+		50B049531D7375FD009E8973 /* roundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049521D7375FD009E8973 /* roundImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,15 +39,16 @@
 		50B049241D722E8D009E8973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50B049261D722E8D009E8973 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50B049291D722E8D009E8973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		50B0492B1D722E8D009E8973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50B0492B1D722E8D009E8973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = DouBanRadio/Assets.xcassets; sourceTree = "<group>"; };
 		50B0492E1D722E8D009E8973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		50B049301D722E8D009E8973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50B049301D722E8D009E8973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = DouBanRadio/Info.plist; sourceTree = "<group>"; };
 		50B049351D722E8D009E8973 /* DouBanRadioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouBanRadioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B049391D722E8D009E8973 /* DouBanRadioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanRadioTests.swift; sourceTree = "<group>"; };
 		50B0493B1D722E8D009E8973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B049401D722E8D009E8973 /* DouBanRadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouBanRadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B049441D722E8D009E8973 /* DouBanRadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanRadioUITests.swift; sourceTree = "<group>"; };
 		50B049461D722E8D009E8973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50B049521D7375FD009E8973 /* roundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,10 @@
 				50B049381D722E8D009E8973 /* DouBanRadioTests */,
 				50B049431D722E8D009E8973 /* DouBanRadioUITests */,
 				50B049221D722E8C009E8973 /* Products */,
+				50B049281D722E8D009E8973 /* Main.storyboard */,
+				50B0492B1D722E8D009E8973 /* Assets.xcassets */,
+				50B0492D1D722E8D009E8973 /* LaunchScreen.storyboard */,
+				50B049301D722E8D009E8973 /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +105,7 @@
 			children = (
 				50B049241D722E8D009E8973 /* AppDelegate.swift */,
 				50B049261D722E8D009E8973 /* ViewController.swift */,
-				50B049281D722E8D009E8973 /* Main.storyboard */,
-				50B0492B1D722E8D009E8973 /* Assets.xcassets */,
-				50B0492D1D722E8D009E8973 /* LaunchScreen.storyboard */,
-				50B049301D722E8D009E8973 /* Info.plist */,
+				50B049521D7375FD009E8973 /* roundImage.swift */,
 			);
 			path = DouBanRadio;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				50B049271D722E8D009E8973 /* ViewController.swift in Sources */,
 				50B049251D722E8D009E8973 /* AppDelegate.swift in Sources */,
+				50B049531D7375FD009E8973 /* roundImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +306,7 @@
 				50B049291D722E8D009E8973 /* Base */,
 			);
 			name = Main.storyboard;
+			path = DouBanRadio;
 			sourceTree = "<group>";
 		};
 		50B0492D1D722E8D009E8973 /* LaunchScreen.storyboard */ = {
@@ -310,6 +315,7 @@
 				50B0492E1D722E8D009E8973 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = DouBanRadio;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -485,6 +491,7 @@
 				50B0494B1D722E8D009E8973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50B0494C1D722E8D009E8973 /* Build configuration list for PBXNativeTarget "DouBanRadioTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +500,7 @@
 				50B0494E1D722E8D009E8973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50B0494F1D722E8D009E8973 /* Build configuration list for PBXNativeTarget "DouBanRadioUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +509,7 @@
 				50B049511D722E8D009E8973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
