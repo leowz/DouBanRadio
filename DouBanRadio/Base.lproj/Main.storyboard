@@ -8,10 +8,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Channel List Controller-->
         <scene sceneID="6Nh-n6-v6U">
             <objects>
-                <viewController id="ZG3-7f-Pzb" sceneMemberID="viewController">
+                <viewController id="ZG3-7f-Pzb" customClass="ChannelListController" customModule="DouBanRadio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CFy-Vz-DOs"/>
                         <viewControllerLayoutGuide type="bottom" id="44L-zS-cfh"/>
@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="88" width="600" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5TQ-kz-Zk1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChannelCell" id="5TQ-kz-Zk1">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5TQ-kz-Zk1" id="7oD-ws-jGy">
@@ -42,6 +42,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZG3-7f-Pzb" id="2Ur-XN-r0M"/>
+                                    <outlet property="delegate" destination="ZG3-7f-Pzb" id="MgH-PB-erG"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,6 +65,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="ChannelListTableView" destination="I31-kL-r5i" id="lhL-Kw-Aj8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FY4-bX-Opa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -384,8 +391,9 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="albumImage" destination="7cc-Cm-Tdn" id="KJo-06-cjS"/>
+                        <outlet property="albumImageView" destination="7cc-Cm-Tdn" id="Tgw-v8-Fpn"/>
                         <outlet property="background" destination="8x7-XX-qfK" id="rEa-Ow-aiC"/>
+                        <outlet property="songListTableView" destination="Poj-MB-ixM" id="g4G-ct-TDH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

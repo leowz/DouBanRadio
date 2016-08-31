@@ -15,6 +15,9 @@
 		50B0493A1D722E8D009E8973 /* DouBanRadioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049391D722E8D009E8973 /* DouBanRadioTests.swift */; };
 		50B049451D722E8D009E8973 /* DouBanRadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049441D722E8D009E8973 /* DouBanRadioUITests.swift */; };
 		50B049531D7375FD009E8973 /* roundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049521D7375FD009E8973 /* roundImage.swift */; };
+		50B049551D76258D009E8973 /* ChannelListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049541D76258D009E8973 /* ChannelListController.swift */; };
+		50E44EBB1D76341600CA61D8 /* HttpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E44EBA1D76341600CA61D8 /* HttpController.swift */; };
+		76C050291C443D4F75918EFA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CDB44CE76A64D19F3A8641 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		50B049211D722E8C009E8973 /* DouBanRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouBanRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		50B049241D722E8D009E8973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50B049241D722E8D009E8973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DouBanRadio/AppDelegate.swift; sourceTree = "<group>"; };
 		50B049261D722E8D009E8973 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50B049291D722E8D009E8973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50B0492B1D722E8D009E8973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = DouBanRadio/Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		50B049441D722E8D009E8973 /* DouBanRadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanRadioUITests.swift; sourceTree = "<group>"; };
 		50B049461D722E8D009E8973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B049521D7375FD009E8973 /* roundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundImage.swift; sourceTree = "<group>"; };
+		50B049541D76258D009E8973 /* ChannelListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListController.swift; sourceTree = "<group>"; };
+		50E44EBA1D76341600CA61D8 /* HttpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpController.swift; sourceTree = "<group>"; };
+		63CDB44CE76A64D19F3A8641 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8332B81E92033682F5DC5E9F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		834D30CD0F82B93C0A50B9D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C050291C443D4F75918EFA /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1721753C58EE335AFD963C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63CDB44CE76A64D19F3A8641 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		50B049181D722E8C009E8973 = {
 			isa = PBXGroup;
 			children = (
@@ -83,10 +100,13 @@
 				50B049381D722E8D009E8973 /* DouBanRadioTests */,
 				50B049431D722E8D009E8973 /* DouBanRadioUITests */,
 				50B049221D722E8C009E8973 /* Products */,
+				50B049241D722E8D009E8973 /* AppDelegate.swift */,
 				50B049281D722E8D009E8973 /* Main.storyboard */,
 				50B0492B1D722E8D009E8973 /* Assets.xcassets */,
 				50B0492D1D722E8D009E8973 /* LaunchScreen.storyboard */,
 				50B049301D722E8D009E8973 /* Info.plist */,
+				5329E0A1830BE211704890D7 /* Pods */,
+				1E1721753C58EE335AFD963C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +123,9 @@
 		50B049231D722E8D009E8973 /* DouBanRadio */ = {
 			isa = PBXGroup;
 			children = (
-				50B049241D722E8D009E8973 /* AppDelegate.swift */,
 				50B049261D722E8D009E8973 /* ViewController.swift */,
+				50B049541D76258D009E8973 /* ChannelListController.swift */,
+				50E44EBA1D76341600CA61D8 /* HttpController.swift */,
 				50B049521D7375FD009E8973 /* roundImage.swift */,
 			);
 			path = DouBanRadio;
@@ -128,6 +149,15 @@
 			path = DouBanRadioUITests;
 			sourceTree = "<group>";
 		};
+		5329E0A1830BE211704890D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8332B81E92033682F5DC5E9F /* Pods.debug.xcconfig */,
+				834D30CD0F82B93C0A50B9D8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50B049491D722E8D009E8973 /* Build configuration list for PBXNativeTarget "DouBanRadio" */;
 			buildPhases = (
+				9C85FD35400FE0FB4BDB613D /* Check Pods Manifest.lock */,
 				50B0491D1D722E8C009E8973 /* Sources */,
 				50B0491E1D722E8C009E8973 /* Frameworks */,
 				50B0491F1D722E8C009E8973 /* Resources */,
+				0FC46C2939D973B396989351 /* Embed Pods Frameworks */,
+				DC60FCA6A77F60F8036BE1B3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,14 +290,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FC46C2939D973B396989351 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C85FD35400FE0FB4BDB613D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC60FCA6A77F60F8036BE1B3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50B0491D1D722E8C009E8973 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				50B049271D722E8D009E8973 /* ViewController.swift in Sources */,
+				50E44EBB1D76341600CA61D8 /* HttpController.swift in Sources */,
 				50B049251D722E8D009E8973 /* AppDelegate.swift in Sources */,
 				50B049531D7375FD009E8973 /* roundImage.swift in Sources */,
+				50B049551D76258D009E8973 /* ChannelListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +406,7 @@
 /* Begin XCBuildConfiguration section */
 		50B049471D722E8D009E8973 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8332B81E92033682F5DC5E9F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -368,6 +452,7 @@
 		};
 		50B049481D722E8D009E8973 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 834D30CD0F82B93C0A50B9D8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -406,28 +491,33 @@
 		};
 		50B0494A1D722E8D009E8973 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8332B81E92033682F5DC5E9F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DouBanRadio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wengzhang.DouBanRadio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
 		50B0494B1D722E8D009E8973 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 834D30CD0F82B93C0A50B9D8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DouBanRadio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wengzhang.DouBanRadio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
 		50B0494D1D722E8D009E8973 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8332B81E92033682F5DC5E9F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DouBanRadioTests/Info.plist;
@@ -440,6 +530,7 @@
 		};
 		50B0494E1D722E8D009E8973 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 834D30CD0F82B93C0A50B9D8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DouBanRadioTests/Info.plist;
@@ -452,6 +543,7 @@
 		};
 		50B049501D722E8D009E8973 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8332B81E92033682F5DC5E9F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DouBanRadioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -463,6 +555,7 @@
 		};
 		50B049511D722E8D009E8973 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 834D30CD0F82B93C0A50B9D8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = DouBanRadioUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
