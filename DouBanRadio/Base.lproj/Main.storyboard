@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="top" id="CFy-Vz-DOs"/>
                         <viewControllerLayoutGuide type="bottom" id="44L-zS-cfh"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Q6E-KN-6sd">
+                    <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="Q6E-KN-6sd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -87,7 +87,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8x7-XX-qfK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="LEe-TV-rt4"/>
                                     <constraint firstAttribute="height" constant="600" id="qZb-aQ-0KN"/>
@@ -178,10 +177,10 @@
                                 </constraints>
                                 <state key="normal" title="L"/>
                                 <connections>
-                                    <segue destination="ZG3-7f-Pzb" kind="presentation" identifier="toList" id="dg8-r5-cJq"/>
+                                    <segue destination="ZG3-7f-Pzb" kind="show" identifier="toList" id="dg8-r5-cJq"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Poj-MB-ixM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Poj-MB-ixM">
                                 <rect key="frame" x="0.0" y="305" width="600" height="295"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
