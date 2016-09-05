@@ -393,6 +393,7 @@
                         <outlet property="albumImageView" destination="7cc-Cm-Tdn" id="Tgw-v8-Fpn"/>
                         <outlet property="background" destination="8x7-XX-qfK" id="rEa-Ow-aiC"/>
                         <outlet property="songListTableView" destination="Poj-MB-ixM" id="g4G-ct-TDH"/>
+                        <outlet property="timeLabel" destination="3AS-7O-JkI" id="ldk-eb-c5v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

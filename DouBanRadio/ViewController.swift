@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MediaPlayer
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,HTTPProtocol,ChannelProtocol {
     let douBanURL = "http://www.douban.com/j/app/radio/channels";
@@ -20,10 +21,22 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             songListTableView.backgroundColor = UIColor.clearColor();
         }
     }  // songList
-    var IHttp = HTTPController();
     
-    var songsInTable:[JSON] = [];//variable of songs info
-    var channelsInTable:[JSON] = [];//channel info
+    var IHttp = HTTPController();
+    //variable of songs info
+    var songsInTable:[JSON] = [];
+    //channel info
+    var channelsInTable:[JSON] = [];
+    //image cache
+    var imageCache = Dictionary<String,UIImage>();
+    
+    //media player
+    var audioPlayer = MPMoviePlayerController();
+    
+    //timer for song intervals
+    var timer:NSTimer?;
+    
+    @IBOutlet weak var timeLabel: UILabel!
 //MARK:- Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +57,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    //blur effect
     func backgroundBlur(){
         //set blurEffet
         let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.Light);
@@ -65,16 +78,83 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let imURL = rowData["picture"].string;
         //set background
         onSetBackground(imURL!);
+        
+        //get music url
+        let musicURL = rowData["url"].string;
+        //play music
+        onSetAudio(musicURL!);
+        //rotate album
+        self.albumImageView.onRotate();
     }
     
     //set bakcground image
     func onSetBackground(url:String){
-        //get image
-        Alamofire.request(.GET, url).response { (_, _, data, error) in
-            let img = UIImage.init(data: data!);
-            self.background.image = img;
-            self.albumImageView.image = img;
+        //set image
+        onGetImageCache(url, imgView: self.background);
+        onGetImageCache(url, imgView: self.albumImageView);
+    }
+    
+    //functio for image cache
+    func onGetImageCache(url:String,imgView:UIImageView){
+    //check if the dic contains the image
+        let img = imageCache[url];
+    //if nil fetch through network else set imgView as img
+        if img == nil{
+            Alamofire.request(.GET, url).response(completionHandler: { (_, _, data, error) in
+                //set imgView as the fetched image
+                let img = UIImage.init(data: data!);
+                imgView.image = img;
+                //save to cache Dic
+                self.imageCache[url] = img;
+            })
+        }else{
+            imgView.image = img;
         }
+    }
+    
+    //Music play function
+    func onSetAudio(url:String){
+        //play music
+        self.audioPlayer.stop();
+        self.audioPlayer.contentURL = NSURL.init(string: url);
+        self.audioPlayer.play();
+        
+        //set timer
+        timer?.invalidate();
+        timeLabel.text = "00:00";
+        //start timer
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "onUpdate", userInfo: nil, repeats: true);
+    }
+    
+    //timer update function
+    func onUpdate(){
+        //get current music play time
+        let cTime = audioPlayer.duration;//totoal seconds
+        let playedTime = audioPlayer.currentPlaybackTime;
+        if cTime > 0.0 {
+            //translate seconds into real time format
+            let realTime = Int(cTime) - Int(playedTime);
+            let seconds = realTime % 60 ;
+            let minutes = Int(realTime/60);
+            
+            var time = "";
+            if (minutes < 10 ){
+                time = "0\(minutes):";
+            }else{
+                time = "\(minutes):";
+            }
+            
+            if (seconds < 10){
+                time += "0\(seconds)";
+            }else{
+                time += "\(seconds)";
+            }
+            
+            //upDate time label
+            timeLabel.text = time;
+        }
+        
+     
     }
 
 //MARK:- Delegation function
@@ -92,9 +172,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
        
         //set cell image
         let thumbURL = rowData["picture"].string;
-        Alamofire.request(.GET,thumbURL!).response { (_, _, data, error) in
-             cell.imageView?.image = UIImage.init(data: data!);
-        }
+        onGetImageCache(thumbURL!, imgView: cell.imageView!);
         
         return cell;
     }
@@ -107,8 +185,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         if let channels = json["channels"].array{
             self.channelsInTable = channels;
         }else if let songs = json["song"].array{
-            print(songs);
-            print(songs.count);
             self.songsInTable = songs;
             self.songListTableView.reloadData();
         }
