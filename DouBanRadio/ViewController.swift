@@ -36,6 +36,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     //timer for song intervals
     var timer:NSTimer?;
     
+    @IBOutlet weak var songProgressBar: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
 //MARK:- Functions
     override func viewDidLoad() {
@@ -62,7 +63,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         //set blurEffet
         let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.Light);
         let blurView = UIVisualEffectView.init(effect: blurEffect);
-        blurView.frame.size = CGSize.init(width: self.view.frame.width, height: self.view.frame.height);
+        blurView.frame.size = CGSize.init(width: self.view.frame.width + 10, height: self.view.frame.height);
         background.addSubview(blurView);
         
     }
@@ -129,11 +130,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     //timer update function
     func onUpdate(){
         //get current music play time
-        let cTime = audioPlayer.duration;//totoal seconds
+        let tTime = audioPlayer.duration;//totoal seconds
         let playedTime = audioPlayer.currentPlaybackTime;
-        if cTime > 0.0 {
+        if tTime > 0.0 {
             //translate seconds into real time format
-            let realTime = Int(cTime) - Int(playedTime);
+            let realTime = Int(tTime) - Int(playedTime);
             let seconds = realTime % 60 ;
             let minutes = Int(realTime/60);
             
@@ -152,6 +153,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
             //upDate time label
             timeLabel.text = time;
+            
+            //ratio for progressBar
+            var ratio = CGFloat(playedTime/tTime);
+            //set progressBar
+            songProgressBar.frame.size.width = view.frame.width * ratio;
         }
         
      
