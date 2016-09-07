@@ -64,5 +64,14 @@ class ChannelListController: UIViewController,UITableViewDataSource,UITableViewD
         //dismiss current controller
         self.dismissViewControllerAnimated(true, completion: nil);
     }
-    
+    // set cell display animation
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        //cell 3D animation start value
+        cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
+        
+        UIView.animateWithDuration(0.15) {
+            //end value
+            cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+        }
+    }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500FD24E1D7F780100D81246 /* playButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FD24D1D7F780100D81246 /* playButton.swift */; };
+		500FD2521D80623900D81246 /* modeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FD2511D80623900D81246 /* modeButton.swift */; };
 		50B049251D722E8D009E8973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049241D722E8D009E8973 /* AppDelegate.swift */; };
 		50B049271D722E8D009E8973 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049261D722E8D009E8973 /* ViewController.swift */; };
 		50B0492A1D722E8D009E8973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B049281D722E8D009E8973 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500FD24D1D7F780100D81246 /* playButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playButton.swift; sourceTree = "<group>"; };
+		500FD2511D80623900D81246 /* modeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = modeButton.swift; sourceTree = "<group>"; };
 		50B049211D722E8C009E8973 /* DouBanRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouBanRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B049241D722E8D009E8973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DouBanRadio/AppDelegate.swift; sourceTree = "<group>"; };
 		50B049261D722E8D009E8973 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		500FD24F1D8061FA00D81246 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				50B049521D7375FD009E8973 /* roundImage.swift */,
+				500FD2511D80623900D81246 /* modeButton.swift */,
+				500FD24D1D7F780100D81246 /* playButton.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		500FD2501D80621B00D81246 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				50B049261D722E8D009E8973 /* ViewController.swift */,
+				50B049541D76258D009E8973 /* ChannelListController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
 		50B049181D722E8C009E8973 = {
 			isa = PBXGroup;
 			children = (
@@ -123,10 +146,9 @@
 		50B049231D722E8D009E8973 /* DouBanRadio */ = {
 			isa = PBXGroup;
 			children = (
-				50B049261D722E8D009E8973 /* ViewController.swift */,
-				50B049541D76258D009E8973 /* ChannelListController.swift */,
+				500FD2501D80621B00D81246 /* controller */,
+				500FD24F1D8061FA00D81246 /* view */,
 				50E44EBA1D76341600CA61D8 /* HttpController.swift */,
-				50B049521D7375FD009E8973 /* roundImage.swift */,
 			);
 			path = DouBanRadio;
 			sourceTree = "<group>";
@@ -346,8 +368,10 @@
 				50B049271D722E8D009E8973 /* ViewController.swift in Sources */,
 				50E44EBB1D76341600CA61D8 /* HttpController.swift in Sources */,
 				50B049251D722E8D009E8973 /* AppDelegate.swift in Sources */,
+				500FD24E1D7F780100D81246 /* playButton.swift in Sources */,
 				50B049531D7375FD009E8973 /* roundImage.swift in Sources */,
 				50B049551D76258D009E8973 /* ChannelListController.swift in Sources */,
+				500FD2521D80623900D81246 /* modeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

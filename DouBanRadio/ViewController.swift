@@ -36,8 +36,24 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     //timer for song intervals
     var timer:NSTimer?;
     
+    //currentIndex
+    var curIndex:Int = 0;
+    
     @IBOutlet weak var songProgressBar: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
+    //audio control buttons
+    @IBOutlet weak var playAndPause: playButton!
+    @IBOutlet weak var previous: UIButton!
+    @IBOutlet weak var next: UIButton!
+    @IBOutlet weak var list: UIButton!{
+        didSet{list.enabled = false;}
+    }
+
+    @IBOutlet weak var mode: modeButton!
+  
+    //autoFinish Flag for mode algorthm,select song,next will are not autofinishs
+    var autoFinish = true;
+    
 //MARK:- Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +68,68 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         //get sons in channel 0
         IHttp.onSearch(songsInChannel0);
         
+        //set audio control button
+        playAndPause.addTarget(self, action: #selector(ViewController.onPlay(_:)), forControlEvents: .TouchUpInside);
+        next.addTarget(self, action: #selector(ViewController.onClick(_:)), forControlEvents: .TouchUpInside);
+        previous.addTarget(self, action: #selector(ViewController.onClick(_:)), forControlEvents: .TouchUpInside);
+        mode.addTarget(self, action: #selector(ViewController.onMode(_:)), forControlEvents: .TouchUpInside);
+        
+        //notification when song finishes playing
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.playFinish), name: MPMoviePlayerPlaybackDidFinishNotification, object: audioPlayer);
     }
-
+    
+    //alogrithm of play mode when songs autofinished
+    func playFinish(){
+        if autoFinish{
+            switch mode.mode {
+            case 0:
+                curIndex += 1;
+                curIndex %= songsInTable.count;
+                onSelectRow(curIndex);
+            case 1:
+                curIndex = random() % songsInTable.count;
+                onSelectRow(curIndex);
+            case 2:
+                onSelectRow(curIndex);
+            default:
+                break;
+            }
+        }else{
+            autoFinish = true;
+        }
+    }
+    
+    //action for play buttion
+    func onPlay(btn:playButton){
+        if btn.isPlaying{
+            audioPlayer.play();
+        }else{
+            audioPlayer.pause();
+        }
+    }
+    
+    //action for next/previous button
+    func onClick(btn:UIButton){
+        autoFinish = false;
+        if btn == next{
+            curIndex += 1;
+            if curIndex > self.songsInTable.count - 1 {
+                curIndex = 0;
+            }
+        }else{
+            curIndex -= 1;
+            if curIndex < 0 {
+                curIndex = self.songsInTable.count - 1;
+            }
+        }
+        
+        onSelectRow(curIndex);
+    }
+    
+    func onMode(btn:modeButton){
+    
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,8 +145,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     //the song selected
     func onSelectRow(index:Int){
+       
         //build an indexpath
         let indexPath = NSIndexPath.init(forRow: index, inSection: 0);
+        curIndex = index;
         //when selected
         songListTableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top);
         //get row info
@@ -86,6 +164,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         onSetAudio(musicURL!);
         //rotate album
         self.albumImageView.onRotate();
+        //progressive bar to zero width
+        songProgressBar.frame.size.width = 0;
+        //change button title to pause
+        playAndPause.onPlay();
     }
     
     //set bakcground image
@@ -124,7 +206,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         timer?.invalidate();
         timeLabel.text = "00:00";
         //start timer
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "onUpdate", userInfo: nil, repeats: true);
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(ViewController.onUpdate), userInfo: nil, repeats: true);
+        
+        //set autofinish Flag
+        autoFinish = true;
     }
     
     //timer update function
@@ -167,6 +252,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songsInTable.count;
     }
+    // set cell display animation
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        //cell 3D animation start value
+        cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
+        
+        UIView.animateWithDuration(0.35) {
+            //end value
+            cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+        }
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = songListTableView.dequeueReusableCellWithIdentifier("song") ?? UITableViewCell();// in case of force unwraping nil
@@ -190,6 +285,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         //assigne value to variabel array
         if let channels = json["channels"].array{
             self.channelsInTable = channels;
+            self.list.enabled = true;
         }else if let songs = json["song"].array{
             self.songsInTable = songs;
             self.songListTableView.reloadData();
@@ -203,6 +299,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //set autoFinish flag
+        autoFinish = false;
         onSelectRow(indexPath.row);
     }
     
