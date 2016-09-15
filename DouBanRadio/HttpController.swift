@@ -17,8 +17,10 @@ class HTTPController: NSObject{
     var delegate:HTTPProtocol?
     //接收网址，回调代理方法传数据
     func onSearch(url:String){
+        print("onSearch");
         Alamofire.request(.GET, url).responseJSON{
         response in
+//            print("response is \(response)");
             self.delegate?.didReceiveResults(response.result.value!);
         }
     }

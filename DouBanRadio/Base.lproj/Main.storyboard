@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -85,7 +85,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8x7-XX-qfK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8x7-XX-qfK" customClass="backGroundImageView" customModule="DouBanRadio" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="605" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="LEe-TV-rt4"/>
@@ -120,7 +120,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AS-7O-JkI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AS-7O-JkI" customClass="timeLabelView" customModule="DouBanRadio" customModuleProvider="target">
                                 <rect key="frame" x="265" y="110" width="70" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="JWA-XD-KD8"/>
@@ -140,7 +140,7 @@
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pd-Ux-f0g">
                                 <rect key="frame" x="0.0" y="250" width="600" height="40"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAq-fX-1ne">
+                                    <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAq-fX-1ne" customClass="songProgressBar" customModule="DouBanRadio" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="3" width="0.0" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -196,7 +196,7 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Poj-MB-ixM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Poj-MB-ixM" customClass="songsTableView" customModule="DouBanRadio" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="305" width="605" height="295"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -398,16 +398,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="albumImageView" destination="7cc-Cm-Tdn" id="Tgw-v8-Fpn"/>
-                        <outlet property="background" destination="8x7-XX-qfK" id="rEa-Ow-aiC"/>
                         <outlet property="list" destination="2iL-ne-EOE" id="IBb-Ir-BjV"/>
                         <outlet property="mode" destination="cfL-RI-3Da" id="eJm-Pl-CGE"/>
                         <outlet property="next" destination="BTr-e0-YcR" id="JuD-QH-KtT"/>
                         <outlet property="playAndPause" destination="uRe-6X-pcu" id="Jt0-2F-TIk"/>
                         <outlet property="previous" destination="VpF-Cx-M1U" id="NkX-0a-xic"/>
-                        <outlet property="songListTableView" destination="Poj-MB-ixM" id="g4G-ct-TDH"/>
-                        <outlet property="songProgressBar" destination="FAq-fX-1ne" id="in1-b2-wd9"/>
-                        <outlet property="timeLabel" destination="3AS-7O-JkI" id="ldk-eb-c5v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
