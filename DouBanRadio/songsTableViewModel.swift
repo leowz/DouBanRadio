@@ -11,9 +11,9 @@ import Alamofire
 import SwiftyJSON
 import MediaPlayer
 
-class songsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HTTPProtocol {
+class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HTTPProtocol,ChannelProtocol {
     //VM`s View target
-    var view :songsTableView?
+   weak var view :songsTableView?
 //        didSet{
 //            print("didSet")
 //            IHttp.delegate = self;
@@ -22,13 +22,13 @@ class songsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
 //        }
     ;
     //background image
-    var albumImageView :roundImage?;
+    weak var albumImageView :roundImage?;
     //song progress bar
-    var progressBar :songProgressBar?;
+    weak var progressBar :songProgressBar?;
     //background
-    var background:backGroundImageView?;
+    weak var background:backGroundImageView?;
     //labelview time label
-    var timeLabel :timeLabelView?;
+    weak var timeLabel :timeLabelView?;
     //variable of songs info
     var songsInTable:[JSON] = [];
     //get data
@@ -48,7 +48,7 @@ class songsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     
     override init() {
         super.init();
-        print("init viewModel")
+//        print("init viewModel")
 //        albumImageView.viewModel = self;
 //        progressBar.viewModel = self;
 //        background.viewModel = self;
@@ -59,27 +59,28 @@ class songsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
         IHttp.onSearch(songsInChannel0);
     }
  //singleton
-    static let instance: songsTableViewModel = songsTableViewModel()
+    static let instance: SongsTableViewModel = SongsTableViewModel()
     
-    class func shareManager() -> songsTableViewModel {
+    class func shareManager() -> SongsTableViewModel {
         return instance;
     }
     
     func didReceiveResults(results:AnyObject){
         print("didReceiveResults");
         let json = JSON(results); //data into json format
-//        print(json);
-        //assigne value to variabel array
-//        if let channels = json["channels"].array{
-////            self.channelsInTable = channels;
-////            self.list.enabled = true;
-//        }else 
         if let songs = json["song"].array{
             print("reloadData");
             self.songsInTable = songs;
             self.view!.reloadData();
         }
     }
+    
+    func onChangeChannel(channelID: String) {
+        //set url of given channel
+        let url = "http://douban.fm/j/mine/playlist?type=n&channel=\(channelID)&from=mainsite"
+        IHttp.onSearch(url);
+    }
+    
     //the song selected
     func onSelectRow(index:Int){
         

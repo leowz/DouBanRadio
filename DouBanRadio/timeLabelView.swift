@@ -9,7 +9,7 @@
 import UIKit
 
 class timeLabelView: UILabel {
-    var viewModel = songsTableViewModel.shareManager();
+    var viewModel = SongsTableViewModel.shareManager();
     override func awakeFromNib() {
         viewModel.timeLabel = self;
     }

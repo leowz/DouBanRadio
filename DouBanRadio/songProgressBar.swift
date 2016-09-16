@@ -9,7 +9,7 @@
 import UIKit
 
 class songProgressBar: UIImageView {
-    var viewModel  = songsTableViewModel.shareManager();
+    var viewModel  = SongsTableViewModel.shareManager();
     override func awakeFromNib() {
         //binding
         viewModel.progressBar = self;

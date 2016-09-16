@@ -10,7 +10,7 @@ import UIKit
 
 class songsTableView: UITableView {
     
-     var viewModel  = songsTableViewModel.shareManager();
+     var viewModel  = SongsTableViewModel.shareManager();
     
     override func awakeFromNib() {
         print("init songsTableView")

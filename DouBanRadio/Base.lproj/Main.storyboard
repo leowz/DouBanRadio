@@ -29,7 +29,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I31-kL-r5i">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I31-kL-r5i" customClass="ChannelListTableView" customModule="DouBanRadio" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="600" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -42,10 +42,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="ZG3-7f-Pzb" id="2Ur-XN-r0M"/>
-                                    <outlet property="delegate" destination="ZG3-7f-Pzb" id="MgH-PB-erG"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,7 +62,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="ChannelListTableView" destination="I31-kL-r5i" id="lhL-Kw-Aj8"/>
+                        <outlet property="ChannelTableView" destination="I31-kL-r5i" id="1mP-Pz-BX8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FY4-bX-Opa" userLabel="First Responder" sceneMemberID="firstResponder"/>

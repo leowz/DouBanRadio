@@ -45,10 +45,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var playAndPause: playButton!
     @IBOutlet weak var previous: UIButton!
     @IBOutlet weak var next: UIButton!
-    @IBOutlet weak var list: UIButton!{
-        didSet{list.enabled = false;}
-    }
-
+    @IBOutlet weak var list: UIButton!
     @IBOutlet weak var mode: modeButton!
   
     //autoFinish Flag for mode algorthm,select song,next will are not autofinishs
@@ -62,7 +59,7 @@ class ViewController: UIViewController {
 //        songListTableView.dataSource = self;
 //        IHttp.delegate = self;
         backgroundBlur();
-        
+    }
         //get channel
 //        IHttp.onSearch(douBanURL);
 //        //get sons in channel 0
@@ -75,8 +72,8 @@ class ViewController: UIViewController {
 //        mode.addTarget(self, action: #selector(ViewController.onMode(_:)), forControlEvents: .TouchUpInside);
 //        
 //        //notification when song finishes playing
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.playFinish), name: MPMoviePlayerPlaybackDidFinishNotification, object: audioPlayer);
-    }
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "", name: NSNotificatio, object: <#T##AnyObject?#>)
+//    }
 //
     //alogrithm of play mode when songs autofinished
 //    func playFinish(){

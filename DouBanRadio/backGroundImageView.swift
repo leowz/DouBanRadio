@@ -9,7 +9,7 @@
 import UIKit
 
 class backGroundImageView: UIImageView {
-    var viewModel = songsTableViewModel.shareManager();
+    var viewModel = SongsTableViewModel.shareManager();
     override func awakeFromNib() {
         viewModel.background = self;
 //        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.Light);

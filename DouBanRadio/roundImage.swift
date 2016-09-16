@@ -9,7 +9,7 @@
 import UIKit
 
 class roundImage: UIImageView {
-    var viewModel  = songsTableViewModel.shareManager();
+    var viewModel  = SongsTableViewModel.shareManager();
 
     override func awakeFromNib() {
 //        print("init roundImage");

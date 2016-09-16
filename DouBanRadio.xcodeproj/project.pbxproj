@@ -25,6 +25,8 @@
 		50F38ED31D8B3C0D00F418F0 /* backGroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F38ED21D8B3C0D00F418F0 /* backGroundImageView.swift */; };
 		50F38ED51D8B3CCE00F418F0 /* timeLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F38ED41D8B3CCE00F418F0 /* timeLabelView.swift */; };
 		50F38ED71D8BF7F300F418F0 /* staticCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F38ED61D8BF7F300F418F0 /* staticCircleView.swift */; };
+		50F38ED91D8C8A9A00F418F0 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F38ED81D8C8A9A00F418F0 /* ChannelListViewModel.swift */; };
+		50F38EDB1D8C8BD700F418F0 /* ChannelListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F38EDA1D8C8BD700F418F0 /* ChannelListTableView.swift */; };
 		76C050291C443D4F75918EFA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CDB44CE76A64D19F3A8641 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		50F38ED21D8B3C0D00F418F0 /* backGroundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = backGroundImageView.swift; sourceTree = "<group>"; };
 		50F38ED41D8B3CCE00F418F0 /* timeLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timeLabelView.swift; sourceTree = "<group>"; };
 		50F38ED61D8BF7F300F418F0 /* staticCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = staticCircleView.swift; sourceTree = "<group>"; };
+		50F38ED81D8C8A9A00F418F0 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
+		50F38EDA1D8C8BD700F418F0 /* ChannelListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListTableView.swift; sourceTree = "<group>"; };
 		63CDB44CE76A64D19F3A8641 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8332B81E92033682F5DC5E9F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		834D30CD0F82B93C0A50B9D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,8 +122,9 @@
 				50F38ED01D8B3B0C00F418F0 /* songProgressBar.swift */,
 				500FD2511D80623900D81246 /* modeButton.swift */,
 				500FD24D1D7F780100D81246 /* playButton.swift */,
-				50F38ECC1D8AD21400F418F0 /* songsTableView.swift */,
 				50F38ED41D8B3CCE00F418F0 /* timeLabelView.swift */,
+				50F38ECC1D8AD21400F418F0 /* songsTableView.swift */,
+				50F38EDA1D8C8BD700F418F0 /* ChannelListTableView.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -191,8 +196,9 @@
 		50F38ECB1D8AD19C00F418F0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				50E44EBA1D76341600CA61D8 /* HttpController.swift */,
 				50F38ECE1D8AD23000F418F0 /* songsTableViewModel.swift */,
+				50F38ED81D8C8A9A00F418F0 /* ChannelListViewModel.swift */,
+				50E44EBA1D76341600CA61D8 /* HttpController.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -397,10 +403,12 @@
 				50F38ED71D8BF7F300F418F0 /* staticCircleView.swift in Sources */,
 				50B049251D722E8D009E8973 /* AppDelegate.swift in Sources */,
 				50F38ED11D8B3B0C00F418F0 /* songProgressBar.swift in Sources */,
+				50F38ED91D8C8A9A00F418F0 /* ChannelListViewModel.swift in Sources */,
 				50F38ECF1D8AD23000F418F0 /* songsTableViewModel.swift in Sources */,
 				500FD24E1D7F780100D81246 /* playButton.swift in Sources */,
 				50F38ECD1D8AD21400F418F0 /* songsTableView.swift in Sources */,
 				50B049531D7375FD009E8973 /* roundImage.swift in Sources */,
+				50F38EDB1D8C8BD700F418F0 /* ChannelListTableView.swift in Sources */,
 				50B049551D76258D009E8973 /* ChannelListController.swift in Sources */,
 				50F38ED31D8B3C0D00F418F0 /* backGroundImageView.swift in Sources */,
 				500FD2521D80623900D81246 /* modeButton.swift in Sources */,
