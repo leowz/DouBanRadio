@@ -14,12 +14,7 @@ import MediaPlayer
 class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HTTPProtocol,ChannelProtocol {
     //VM`s View target
    weak var view :songsTableView?
-//        didSet{
-//            print("didSet")
-//            IHttp.delegate = self;
-//            //get sons in channel 0
-//            IHttp.onSearch(songsInChannel0);
-//        }
+
     ;
     //background image
     weak var albumImageView :roundImage?;
@@ -48,11 +43,7 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     
     override init() {
         super.init();
-//        print("init viewModel")
-//        albumImageView.viewModel = self;
-//        progressBar.viewModel = self;
-//        background.viewModel = self;
-//        timeLabel.viewModel = self;
+
         
         IHttp.delegate = self;
         //get sons in channel 0
