@@ -61,7 +61,7 @@ class ViewController: UIViewController {
 //        songListTableView.delegate = self;
 //        songListTableView.dataSource = self;
 //        IHttp.delegate = self;
-//        backgroundBlur();
+        backgroundBlur();
         
         //get channel
 //        IHttp.onSearch(douBanURL);
@@ -134,15 +134,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //blur effect
-//    func backgroundBlur(){
-//        //set blurEffet
-//        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.Light);
-//        let blurView = UIVisualEffectView.init(effect: blurEffect);
-//        blurView.frame.size = CGSize.init(width: self.view.frame.width + 10, height: self.view.frame.height);
-//        background.addSubview(blurView);
-//        
-//    }
+   // blur effect
+    func backgroundBlur(){
+        //set blurEffet
+        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.Light);
+        let blurView = UIVisualEffectView.init(effect: blurEffect);
+        blurView.frame.size = CGSize.init(width: self.view.frame.width + 10, height: self.view.frame.height);
+//        let c = view.subviews.count;
+        view.subviews.first!.addSubview(blurView);
+//        view.addSubview(blurView);
+        
+    }
     //the song selected
 //    func onSelectRow(index:Int){
 //       

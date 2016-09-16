@@ -9,20 +9,10 @@
 import UIKit
 
 class roundImage: UIImageView {
-    weak var viewModel = songsTableViewModel();
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder);
-//        
-//        //draw round
-//        self.clipsToBounds = true;
-//        self.layer.cornerRadius = self.frame.size.width / 2; //make the layer a circular
-//        
-//        //draw border
-//        self.layer.borderWidth = 4;
-//        self.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).CGColor;
-//        
-//    }
+    var viewModel  = songsTableViewModel.shareManager();
+
     override func awakeFromNib() {
+//        print("init roundImage");
         //draw round
         self.clipsToBounds = true;
         self.layer.cornerRadius = self.frame.size.width / 2; //make the layer a circular
@@ -31,13 +21,13 @@ class roundImage: UIImageView {
         self.layer.borderWidth = 4;
         self.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).CGColor;
         //set view model
-        viewModel?.albumImageView = self;
+        viewModel.albumImageView = self;
     }
     
     //rotation function
     func onRotate(){
         //get animation
-        var animation = CABasicAnimation(keyPath: "transform.rotation");
+        let animation = CABasicAnimation(keyPath: "transform.rotation");
         //set animation
         animation.fromValue = 0.0;
         animation.toValue = M_PI * 2.0; //rotate from 0 to 2pi

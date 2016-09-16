@@ -9,10 +9,10 @@
 import UIKit
 
 class songProgressBar: UIImageView {
-    weak var viewModel = songsTableViewModel();
+    var viewModel  = songsTableViewModel.shareManager();
     override func awakeFromNib() {
         //binding
-        viewModel?.progressBar = self;
+        viewModel.progressBar = self;
     }
 
 }

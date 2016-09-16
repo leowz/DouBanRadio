@@ -106,9 +106,9 @@
                                     <constraint firstAttribute="height" constant="200" id="tPy-du-p1x"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fyo-bR-Us0" customClass="roundImage" customModule="DouBanRadio" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fyo-bR-Us0" customClass="staticCircleView" customModule="DouBanRadio" customModuleProvider="target">
                                 <rect key="frame" x="265" y="85" width="70" height="70"/>
-                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.74875710230000003" green="0.74875710230000003" blue="0.74875710230000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="OML-kr-UcS"/>
                                     <constraint firstAttribute="width" constant="70" id="itL-qc-IKP"/>

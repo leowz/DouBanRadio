@@ -9,8 +9,8 @@
 import UIKit
 
 class timeLabelView: UILabel {
-    weak var viewModel = songsTableViewModel();
+    var viewModel = songsTableViewModel.shareManager();
     override func awakeFromNib() {
-        viewModel?.timeLabel = self;
+        viewModel.timeLabel = self;
     }
 }

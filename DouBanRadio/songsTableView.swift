@@ -9,9 +9,11 @@
 import UIKit
 
 class songsTableView: UITableView {
-    var viewModel = songsTableViewModel();
+    
+     var viewModel  = songsTableViewModel.shareManager();
     
     override func awakeFromNib() {
+        print("init songsTableView")
         self.backgroundColor = UIColor.clearColor();
         viewModel.view = self;
         self.delegate = viewModel;

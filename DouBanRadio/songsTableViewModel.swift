@@ -13,22 +13,22 @@ import MediaPlayer
 
 class songsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HTTPProtocol {
     //VM`s View target
-    var view:songsTableView?{
-        didSet{
-            print("didSet")
-            IHttp.delegate = self;
-            //get sons in channel 0
-            IHttp.onSearch(songsInChannel0);
-        }
-    };
+    var view :songsTableView?
+//        didSet{
+//            print("didSet")
+//            IHttp.delegate = self;
+//            //get sons in channel 0
+//            IHttp.onSearch(songsInChannel0);
+//        }
+    ;
     //background image
-    var albumImageView:roundImage?;
+    var albumImageView :roundImage?;
     //song progress bar
-    var progressBar:songProgressBar?;
+    var progressBar :songProgressBar?;
     //background
     var background:backGroundImageView?;
     //labelview time label
-    var timeLabel:timeLabelView?;
+    var timeLabel :timeLabelView?;
     //variable of songs info
     var songsInTable:[JSON] = [];
     //get data
@@ -46,27 +46,36 @@ class songsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     //autoFinish Flag for mode algorthm,select song,next will are not autofinishs
     var autoFinish = true;
     
-//    override init() {
-//        super.init();
-//        print("init");
-//        IHttp.delegate = self;
-//        //get sons in channel 0
-//        IHttp.onSearch(songsInChannel0);
-//        
-//    }
+    override init() {
+        super.init();
+        print("init viewModel")
+//        albumImageView.viewModel = self;
+//        progressBar.viewModel = self;
+//        background.viewModel = self;
+//        timeLabel.viewModel = self;
+        
+        IHttp.delegate = self;
+        //get sons in channel 0
+        IHttp.onSearch(songsInChannel0);
+    }
+ //singleton
+    static let instance: songsTableViewModel = songsTableViewModel()
     
-    
+    class func shareManager() -> songsTableViewModel {
+        return instance;
+    }
     
     func didReceiveResults(results:AnyObject){
-        //print(results);
+        print("didReceiveResults");
         let json = JSON(results); //data into json format
-        print(json);
+//        print(json);
         //assigne value to variabel array
 //        if let channels = json["channels"].array{
 ////            self.channelsInTable = channels;
 ////            self.list.enabled = true;
 //        }else 
         if let songs = json["song"].array{
+            print("reloadData");
             self.songsInTable = songs;
             self.view!.reloadData();
         }
@@ -139,8 +148,7 @@ class songsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     
     //MARK:- Delegation function
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return songsInTable.count;
-        return 0;
+        return songsInTable.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
