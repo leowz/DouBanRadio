@@ -19,6 +19,7 @@ protocol ChannelProtocol {
 //}
 class ChannelListController: UIViewController{
 
+    @IBOutlet weak var listLabelView: UILabel!
 
     @IBOutlet weak var ChannelTableView: ChannelListTableView!{
         didSet{
@@ -26,15 +27,14 @@ class ChannelListController: UIViewController{
         }
     }
     
-    var delegate:ChannelProtocol?
-    
-    //Channel list row Data
-    var channelData:[JSON] = [];
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.alpha = 1;
-        
+        let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(ChannelListController.onTapList));
+        tapGesture.numberOfTapsRequired = 1;
+        tapGesture.numberOfTouchesRequired = 1;
+        listLabelView.userInteractionEnabled = true;//important
+        listLabelView.addGestureRecognizer(tapGesture);
         // Do any additional setup after loading the view.
     }
 
@@ -43,6 +43,10 @@ class ChannelListController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+    func onTapList(){
+        NSLog("tap tap tap");
+        self.dismissViewControllerAnimated(true, completion: nil);
+    }
 
 ////MARK:- delegation function
 //    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

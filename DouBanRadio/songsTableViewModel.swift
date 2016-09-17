@@ -13,9 +13,7 @@ import MediaPlayer
 
 class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HTTPProtocol,ChannelProtocol {
     //VM`s View target
-   weak var view :songsTableView?
-
-    ;
+    weak var view :songsTableView?;
     //background image
     weak var albumImageView :roundImage?;
     //song progress bar
@@ -24,6 +22,11 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     weak var background:backGroundImageView?;
     //labelview time label
     weak var timeLabel :timeLabelView?;
+    //play button
+    weak var playAndPause:playButton?
+    weak var next:ChangeSong?
+    weak var previous:ChangeSong?
+    weak var mode:modeButton?
     //variable of songs info
     var songsInTable:[JSON] = [];
     //get data
@@ -48,6 +51,13 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
         IHttp.delegate = self;
         //get sons in channel 0
         IHttp.onSearch(songsInChannel0);
+        //set audio control button
+ 
+        
+
+
+         //notification when song finishes playing
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "", name: , object: <#T##AnyObject?#>);
     }
  //singleton
     static let instance: SongsTableViewModel = SongsTableViewModel()
@@ -96,7 +106,7 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
         //progressive bar to zero width
         progressBar!.frame.size.width = 0;
         //change button title to pause
-//        playAndPause.onPlay();
+        playAndPause!.onPlay();
     }
     //set bakcground image
     func onSetBackground(url:String){
@@ -115,11 +125,52 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
         timer?.invalidate();
         timeLabel!.text = "00:00";
         //start timer
-//        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(ViewController.onUpdate), userInfo: nil, repeats: true);
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(SongsTableViewModel.onUpdate), userInfo: nil, repeats: true);
         
         //set autofinish Flag
         autoFinish = true;
     }
+    
+    //timer update function
+        func onUpdate(){
+            //get current music play time
+            let tTime = audioPlayer.duration;//totoal seconds
+            let playedTime = audioPlayer.currentPlaybackTime;
+            if tTime > 0.0 {
+                //translate seconds into real time format
+                let realTime = Int(tTime) - Int(playedTime);
+                let seconds = realTime % 60 ;
+                let minutes = Int(realTime/60);
+    
+                var time = "";
+                if (minutes < 10 ){
+                    time = "0\(minutes):";
+                }else{
+                    time = "\(minutes):";
+                }
+    
+                if (seconds < 10){
+                    time += "0\(seconds)";
+                }else{
+                    time += "\(seconds)";
+                }
+    
+                //upDate time label
+                timeLabel!.text = time;
+    
+                //ratio for progressBar
+                let ratio = CGFloat(playedTime/tTime);
+                //set progressBar
+                progressBar!.frame.size.width = view!.frame.width * ratio;
+            }
+            
+         
+        }
+
+
+    
+  
+    
     //functio for image cache
     func onGetImageCache(url:String,imgView:UIImageView){
         //check if the dic contains the image

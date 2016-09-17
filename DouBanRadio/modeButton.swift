@@ -14,7 +14,8 @@ class modeButton: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
-        self.addTarget(self, action: "onClick:", forControlEvents: .TouchUpInside);
+        self.addTarget(self, action: #selector(modeButton.onClick(_:)), forControlEvents: .TouchUpInside);
+        self.addTarget(self, action: #selector(modeButton.onMode(_:)), forControlEvents: .TouchUpInside);
     }
     
     func onClick(sender:UIButton){
@@ -30,5 +31,9 @@ class modeButton: UIButton {
         default:
             break;
         }
+    }
+    
+    func onMode(btn:modeButton){
+        
     }
 }

@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DouBanRadio/songsTableViewModel.swift"
-            timestampString = "495707850.217368"
+            timestampString = "495840512.256864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "init()"
             landmarkType = "5">
          </BreakpointContent>
@@ -36,12 +36,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DouBanRadio/songsTableViewModel.swift"
-            timestampString = "495710306.318845"
+            timestampString = "495840980.192228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "didReceiveResults(_:)"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "onChangeChannel(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -52,12 +52,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DouBanRadio/songsTableViewModel.swift"
-            timestampString = "495710306.318845"
+            timestampString = "495840980.192228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "didReceiveResults(_:)"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "onChangeChannel(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -246,6 +246,22 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "init()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DouBanRadio/playButton.swift"
+            timestampString = "495841512.53753"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "awakeFromNib()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

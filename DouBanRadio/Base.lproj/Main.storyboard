@@ -63,6 +63,7 @@
                     </view>
                     <connections>
                         <outlet property="ChannelTableView" destination="I31-kL-r5i" id="1mP-Pz-BX8"/>
+                        <outlet property="listLabelView" destination="S4e-Et-5De" id="mVy-Ad-gkn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FY4-bX-Opa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,7 +185,7 @@
                                 </constraints>
                                 <state key="normal" title="S"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTr-e0-YcR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTr-e0-YcR" customClass="ChangeSong" customModule="DouBanRadio" customModuleProvider="target">
                                 <rect key="frame" x="366" y="257" width="35" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="S3B-Ct-25O"/>
@@ -222,7 +223,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpF-Cx-M1U">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpF-Cx-M1U" customClass="ChangeSong" customModule="DouBanRadio" customModuleProvider="target">
                                 <rect key="frame" x="200" y="257" width="59" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="59" id="HiZ-vY-Kro"/>
@@ -393,13 +394,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <connections>
-                        <outlet property="list" destination="2iL-ne-EOE" id="IBb-Ir-BjV"/>
-                        <outlet property="mode" destination="cfL-RI-3Da" id="eJm-Pl-CGE"/>
-                        <outlet property="next" destination="BTr-e0-YcR" id="JuD-QH-KtT"/>
-                        <outlet property="playAndPause" destination="uRe-6X-pcu" id="Jt0-2F-TIk"/>
-                        <outlet property="previous" destination="VpF-Cx-M1U" id="NkX-0a-xic"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

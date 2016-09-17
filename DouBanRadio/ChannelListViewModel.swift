@@ -30,7 +30,7 @@ class ChannelListViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,H
     func didReceiveResults(results:AnyObject){
         print("didReceiveResults");
         let json = JSON(results); //data into json format
-                print(json);
+//                print(json);
        // assigne value to variabel array
                 if let channels = json["channels"].array{
                     self.channelData = channels;
