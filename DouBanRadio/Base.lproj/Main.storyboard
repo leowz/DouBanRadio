@@ -185,7 +185,7 @@
                                 </constraints>
                                 <state key="normal" title="S"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTr-e0-YcR" customClass="ChangeSong" customModule="DouBanRadio" customModuleProvider="target">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTr-e0-YcR" customClass="ChangeSong" customModule="DouBanRadio" customModuleProvider="target">
                                 <rect key="frame" x="366" y="257" width="35" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="S3B-Ct-25O"/>
@@ -223,7 +223,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpF-Cx-M1U" customClass="ChangeSong" customModule="DouBanRadio" customModuleProvider="target">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpF-Cx-M1U" customClass="ChangeSong" customModule="DouBanRadio" customModuleProvider="target">
                                 <rect key="frame" x="200" y="257" width="59" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="59" id="HiZ-vY-Kro"/>

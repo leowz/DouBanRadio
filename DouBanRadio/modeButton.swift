@@ -11,11 +11,12 @@ import UIKit
 class modeButton: UIButton {
     //play mode 0:sequential 1: shuffle 2:repeat
     var mode = 0;
-    
+    var viewModel = SongsTableViewModel.shareManager();
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
         self.addTarget(self, action: #selector(modeButton.onClick(_:)), forControlEvents: .TouchUpInside);
         self.addTarget(self, action: #selector(modeButton.onMode(_:)), forControlEvents: .TouchUpInside);
+        viewModel.mode = self;
     }
     
     func onClick(sender:UIButton){

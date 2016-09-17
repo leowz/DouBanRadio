@@ -29,7 +29,7 @@ class ChannelListController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.alpha = 1;
+        view.alpha = 0.9;
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(ChannelListController.onTapList));
         tapGesture.numberOfTapsRequired = 1;
         tapGesture.numberOfTouchesRequired = 1;

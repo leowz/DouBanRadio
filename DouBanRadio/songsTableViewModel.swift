@@ -57,8 +57,29 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
 
 
          //notification when song finishes playing
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "", name: , object: <#T##AnyObject?#>);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SongsTableViewModel.playFinish), name:MPMoviePlayerPlaybackDidFinishNotification , object: nil);
     }
+    //alogrithm of play mode when songs autofinished
+        func playFinish(){
+            if autoFinish{
+                switch mode!.mode {
+                case 0:
+                    curIndex += 1;
+                    curIndex %= songsInTable.count;
+                    onSelectRow(curIndex);
+                case 1:
+                    curIndex = random() % songsInTable.count;
+                    onSelectRow(curIndex);
+                case 2:
+                    onSelectRow(curIndex);
+                default:
+                    break;
+                }
+            }else{
+                autoFinish = true;
+            }
+        }
+
  //singleton
     static let instance: SongsTableViewModel = SongsTableViewModel()
     
