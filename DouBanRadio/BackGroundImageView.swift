@@ -8,7 +8,7 @@
 
 import UIKit
 
-class backGroundImageView: UIImageView {
+class BackGroundImageView: UIImageView {
     var viewModel = SongsTableViewModel.shareManager();
     override func awakeFromNib() {
         viewModel.background = self;

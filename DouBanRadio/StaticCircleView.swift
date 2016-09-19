@@ -8,7 +8,7 @@
 
 import UIKit
 
-class staticCircleView: UIImageView {
+class StaticCircleView: UIImageView {
     override func awakeFromNib() {
         //draw round
         self.clipsToBounds = true;

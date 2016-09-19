@@ -8,7 +8,7 @@
 
 import UIKit
 
-class songsTableView: UITableView {
+class SongsTableView: UITableView {
     
      var viewModel  = SongsTableViewModel.shareManager();
     

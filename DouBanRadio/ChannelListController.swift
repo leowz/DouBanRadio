@@ -14,9 +14,7 @@ protocol ChannelProtocol {
     //get channel id for delegate
     func onChangeChannel(channelID:String)
 }
-//protocol DismissChannel{
-//    func onDismissChannel();
-//}
+
 class ChannelListController: UIViewController{
 
     @IBOutlet weak var listLabelView: UILabel!
@@ -47,39 +45,4 @@ class ChannelListController: UIViewController{
         NSLog("tap tap tap");
         self.dismissViewControllerAnimated(true, completion: nil);
     }
-
-////MARK:- delegation function
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return channelData.count;
-//    }
-//    
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = ChannelListTableView.dequeueReusableCellWithIdentifier("ChannelCell") ?? UITableViewCell() ;
-//        
-//        let rowData = channelData[indexPath.row];
-//        
-//        //set cell
-//        cell.textLabel?.text = rowData["name"].string;
-//        return cell;
-//    }
-//    
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        //get channel_id
-//        let rowData = channelData[indexPath.row];
-//        let channel_id = rowData["channel_id"].stringValue;
-//        //send id to ViewController
-//        delegate?.onChangeChannel(channel_id);
-//        //dismiss current controller
-//        self.dismissViewControllerAnimated(true, completion: nil);
-//    }
-//    // set cell display animation
-//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-//        //cell 3D animation start value
-//        cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
-//        
-//        UIView.animateWithDuration(0.15) {
-//            //end value
-//            cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
-//        }
-//    }
 }

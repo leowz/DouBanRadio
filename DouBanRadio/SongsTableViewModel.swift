@@ -13,20 +13,20 @@ import MediaPlayer
 
 class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HTTPProtocol,ChannelProtocol {
     //VM`s View target
-    weak var view :songsTableView?;
+    weak var view :SongsTableView?;
     //background image
-    weak var albumImageView :roundImage?;
+    weak var albumImageView :RoundImage?;
     //song progress bar
-    weak var progressBar :songProgressBar?;
+    weak var progressBar :SongProgressBar?;
     //background
-    weak var background:backGroundImageView?;
+    weak var background:BackGroundImageView?;
     //labelview time label
-    weak var timeLabel :timeLabelView?;
+    weak var timeLabel :TimeLabelView?;
     //play button
-    weak var playAndPause:playButton?
+    weak var playAndPause:PlayButton?
     weak var next:ChangeSong?
     weak var previous:ChangeSong?
-    weak var mode:modeButton?
+    weak var mode:ModeButton?
     //variable of songs info
     var songsInTable:[JSON] = [];
     //get data

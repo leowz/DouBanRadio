@@ -8,7 +8,7 @@
 
 import UIKit
 
-class roundImage: UIImageView {
+class RoundImage: UIImageView {
     var viewModel  = SongsTableViewModel.shareManager();
 
     override func awakeFromNib() {
