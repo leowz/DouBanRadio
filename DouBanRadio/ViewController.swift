@@ -28,7 +28,7 @@ class ViewController: UIViewController {
    // blur effect
     func backgroundBlur(){
         //set blurEffet
-        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.Light);
+        let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.light);
         let blurView = UIVisualEffectView.init(effect: blurEffect);
         blurView.frame.size = CGSize.init(width: self.view.frame.width + 10, height: self.view.frame.height);
         view.subviews.first!.addSubview(blurView);

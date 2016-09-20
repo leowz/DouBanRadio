@@ -19,7 +19,7 @@ class RoundImage: UIImageView {
         
         //draw border
         self.layer.borderWidth = 4;
-        self.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).CGColor;
+        self.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor;
         //set view model
         viewModel.albumImageView = self;
     }
@@ -34,7 +34,7 @@ class RoundImage: UIImageView {
         animation.duration = 20;//every 20s to rotate from 0 to 2pi
         animation.repeatCount = 10000;
         
-        self.layer.addAnimation(animation, forKey: nil);
+        self.layer.add(animation, forKey: nil);
     }
 
 

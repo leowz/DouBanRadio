@@ -16,7 +16,7 @@ class StaticCircleView: UIImageView {
         
         //draw border
         self.layer.borderWidth = 4;
-        self.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).CGColor;
+        self.layer.borderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7).cgColor;
     }
 
 }

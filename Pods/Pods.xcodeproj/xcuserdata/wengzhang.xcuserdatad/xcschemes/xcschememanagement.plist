@@ -4,17 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Alamofire.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SwiftyJSON.xcscheme</key>
+		<key>Pods-DouBanRadio.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>129D71796A4B74AAD005CE0A</key>
+		<key>040AE83BCC7FA227DE092ED4B24FF611</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E8BA305435E652EA1D3E5D1</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>57EF22E76272EACA34C07B0D</key>
+		<key>B9BC840B3B25E29DAD5FD81AB633D336</key>
 		<dict>
 			<key>primary</key>
 			<true/>

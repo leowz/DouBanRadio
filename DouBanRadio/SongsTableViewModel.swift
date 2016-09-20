@@ -40,7 +40,7 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     var audioPlayer = MPMoviePlayerController();
     
     //timer for song intervals
-    var timer:NSTimer?;
+    var timer:Timer?;
     //autoFinish Flag for mode algorthm,select song,next will are not autofinishs
     var autoFinish = true;
     
@@ -57,7 +57,7 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
 
 
          //notification when song finishes playing
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SongsTableViewModel.playFinish), name:MPMoviePlayerPlaybackDidFinishNotification , object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(SongsTableViewModel.playFinish), name:NSNotification.Name.MPMoviePlayerPlaybackDidFinish , object: nil);
     }
     //alogrithm of play mode when songs autofinished
         func playFinish(){
@@ -68,7 +68,7 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
                     curIndex %= songsInTable.count;
                     onSelectRow(curIndex);
                 case 1:
-                    curIndex = random() % songsInTable.count;
+                    curIndex = Int(arc4random()) % songsInTable.count;
                     onSelectRow(curIndex);
                 case 2:
                     onSelectRow(curIndex);
@@ -87,7 +87,7 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
         return instance;
     }
     
-    func didReceiveResults(results:AnyObject){
+    func didReceiveResults(_ results:AnyObject){
         print("didReceiveResults");
         let json = JSON(results); //data into json format
         if let songs = json["song"].array{
@@ -97,20 +97,20 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
         }
     }
     
-    func onChangeChannel(channelID: String) {
+    func onChangeChannel(_ channelID: String) {
         //set url of given channel
         let url = "http://douban.fm/j/mine/playlist?type=n&channel=\(channelID)&from=mainsite"
         IHttp.onSearch(url);
     }
     
     //the song selected
-    func onSelectRow(index:Int){
+    func onSelectRow(_ index:Int){
         
         //build an indexpath
-        let indexPath = NSIndexPath.init(forRow: index, inSection: 0);
+        let indexPath = IndexPath.init(row: index, section: 0);
         curIndex = index;
         //when selected
-        self.view!.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top);
+        self.view!.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.top);
         //get row info
         let rowData = songsInTable[index];
         //get image url
@@ -130,23 +130,23 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
         playAndPause!.onPlay();
     }
     //set bakcground image
-    func onSetBackground(url:String){
+    func onSetBackground(_ url:String){
         //set image
         onGetImageCache(url, imgView: self.background!);
         onGetImageCache(url, imgView: self.albumImageView!);
     }
     //Music play function
-    func onSetAudio(url:String){
+    func onSetAudio(_ url:String){
         //play music
         self.audioPlayer.stop();
-        self.audioPlayer.contentURL = NSURL.init(string: url);
+        self.audioPlayer.contentURL = URL.init(string: url);
         self.audioPlayer.play();
         
         //set timer
         timer?.invalidate();
         timeLabel!.text = "00:00";
         //start timer
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(SongsTableViewModel.onUpdate), userInfo: nil, repeats: true);
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(SongsTableViewModel.onUpdate), userInfo: nil, repeats: true);
         
         //set autofinish Flag
         autoFinish = true;
@@ -193,14 +193,14 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
   
     
     //functio for image cache
-    func onGetImageCache(url:String,imgView:UIImageView){
+    func onGetImageCache(_ url:String,imgView:UIImageView){
         //check if the dic contains the image
         let img = imageCache[url];
         //if nil fetch through network else set imgView as img
         if img == nil{
-            Alamofire.request(.GET, url).response(completionHandler: { (_, _, data, error) in
-                //set imgView as the fetched image
-                let img = UIImage.init(data: data!);
+            //set imgView as the fetched image
+            Alamofire.request(url).response(completionHandler: { (response) in
+                let img = UIImage.init(data:response.data!);
                 imgView.image = img;
                 //save to cache Dic
                 self.imageCache[url] = img;
@@ -211,17 +211,17 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     }
     
     //MARK:- Delegation function
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songsInTable.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.view!.dequeueReusableCellWithIdentifier("song") ?? UITableViewCell();// in case of force unwraping nil
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.view!.dequeueReusableCell(withIdentifier: "song") ?? UITableViewCell();// in case of force unwraping nil
         //setting reusable cell
-        let rowData = songsInTable[indexPath.row];
+        let rowData = songsInTable[(indexPath as NSIndexPath).row];
         cell.textLabel?.text = rowData["title"].string; //title of the song
         cell.detailTextLabel?.text = rowData["artist"].string;    //artist
-        cell.backgroundColor = UIColor.clearColor();
+        cell.backgroundColor = UIColor.clear;
         
         //set cell image
         let thumbURL = rowData["picture"].string;
@@ -230,19 +230,19 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
         return cell;
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //set autoFinish flag
         autoFinish = false;
-        onSelectRow(indexPath.row);
+        onSelectRow((indexPath as NSIndexPath).row);
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //cell 3D animation start value
         cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
         
-        UIView.animateWithDuration(0.35) {
+        UIView.animate(withDuration: 0.35, animations: {
             //end value
             cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
-        }
+        }) 
     }
 }

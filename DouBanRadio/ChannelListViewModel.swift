@@ -27,7 +27,7 @@ class ChannelListViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,H
         IHttp.onSearch(douBanURL);
     }
     
-    func didReceiveResults(results:AnyObject){
+    func didReceiveResults(_ results:AnyObject){
         print("didReceiveResults");
         let json = JSON(results); //data into json format
 //                print(json);
@@ -41,39 +41,39 @@ class ChannelListViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,H
     
     
     //MARK:- delegation function
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return channelData.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.view!.dequeueReusableCellWithIdentifier("ChannelCell") ?? UITableViewCell() ;
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.view!.dequeueReusableCell(withIdentifier: "ChannelCell") ?? UITableViewCell() ;
         
-        let rowData = channelData[indexPath.row];
+        let rowData = channelData[(indexPath as NSIndexPath).row];
         
         //set cell
         cell.textLabel?.text = rowData["name"].string;
         return cell;
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //get channel_id
-        let rowData = channelData[indexPath.row];
+        let rowData = channelData[(indexPath as NSIndexPath).row];
         let channel_id = rowData["channel_id"].stringValue;
         //send id to ViewController
         delegate.onChangeChannel(channel_id);
         //dismiss current controller
-        self.view!.controller!.dismissViewControllerAnimated(true, completion: nil);
+        self.view!.controller!.dismiss(animated: true, completion: nil);
 //        controllerDismissDelegate?.onDismissChannel();
     }
     // set cell display animation
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //cell 3D animation start value
         cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
         
-        UIView.animateWithDuration(0.15) {
+        UIView.animate(withDuration: 0.15, animations: {
             //end value
             cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
-        }
+        }) 
     }
 
     

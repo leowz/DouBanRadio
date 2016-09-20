@@ -15,28 +15,28 @@ class PlayButton: UIButton {
     let imgPause = UIImage.init(named: "pause");
     override func awakeFromNib() {
 //        self.setImage(UIImage.init(named: "play"), forState: .Normal);
-        self.addTarget(self, action: #selector(PlayButton.onClick), forControlEvents: .TouchUpInside);
+        self.addTarget(self, action: #selector(PlayButton.onClick), for: .touchUpInside);
         viewModel.playAndPause = self;
-        self.addTarget(self, action: #selector(PlayButton.onPlay(_:)), forControlEvents: .TouchUpInside);
+        self.addTarget(self, action: #selector(PlayButton.onPlay(_:)), for: .touchUpInside);
 
     }
     
-     @objc private func onClick(){
+     @objc fileprivate func onClick(){
         isPlaying = !isPlaying;
         if isPlaying{
             
-            self.setImage(imgPause, forState: .Normal);
+            self.setImage(imgPause, for: UIControlState());
         }else{
-            self.setImage(imgPlay, forState: .Normal);
+            self.setImage(imgPlay, for: UIControlState());
         }
     }
     
     func onPlay(){
         isPlaying = true;
-        self.setImage(imgPause, forState: .Normal);
+        self.setImage(imgPause, for: UIControlState());
     }
     //action for play buttion
-    func onPlay(btn:PlayButton){
+    func onPlay(_ btn:PlayButton){
         if btn.isPlaying{
             viewModel.audioPlayer.play();
         }else{

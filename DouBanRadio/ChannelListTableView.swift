@@ -16,7 +16,7 @@ class ChannelListTableView: UITableView {
     override func awakeFromNib() {
 
         viewModel.view = self;
-        self.backgroundColor = UIColor.clearColor();
+        self.backgroundColor = UIColor.clear;
 //        viewModel.delegate = self;
         self.delegate = viewModel;
         self.dataSource = viewModel;

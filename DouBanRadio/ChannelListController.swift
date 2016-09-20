@@ -12,7 +12,7 @@ import Alamofire
 
 protocol ChannelProtocol {
     //get channel id for delegate
-    func onChangeChannel(channelID:String)
+    func onChangeChannel(_ channelID:String)
 }
 
 class ChannelListController: UIViewController{
@@ -31,7 +31,7 @@ class ChannelListController: UIViewController{
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(ChannelListController.onTapList));
         tapGesture.numberOfTapsRequired = 1;
         tapGesture.numberOfTouchesRequired = 1;
-        listLabelView.userInteractionEnabled = true;//important
+        listLabelView.isUserInteractionEnabled = true;//important
         listLabelView.addGestureRecognizer(tapGesture);
         // Do any additional setup after loading the view.
     }
@@ -43,6 +43,6 @@ class ChannelListController: UIViewController{
     
     func onTapList(){
         NSLog("tap tap tap");
-        self.dismissViewControllerAnimated(true, completion: nil);
+        self.dismiss(animated: true, completion: nil);
     }
 }

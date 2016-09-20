@@ -14,27 +14,27 @@ class ModeButton: UIButton {
     var viewModel = SongsTableViewModel.shareManager();
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
-        self.addTarget(self, action: #selector(ModeButton.onClick(_:)), forControlEvents: .TouchUpInside);
-        self.addTarget(self, action: #selector(ModeButton.onMode(_:)), forControlEvents: .TouchUpInside);
+        self.addTarget(self, action: #selector(ModeButton.onClick(_:)), for: .touchUpInside);
+        self.addTarget(self, action: #selector(ModeButton.onMode(_:)), for: .touchUpInside);
         viewModel.mode = self;
     }
     
-    func onClick(sender:UIButton){
+    func onClick(_ sender:UIButton){
         mode += 1;
         mode = mode % 3;
         switch mode {
         case 0:
-            self.setImage(UIImage.init(named: "music"), forState: .Normal);
+            self.setImage(UIImage.init(named: "music"), for: UIControlState());
         case 1:
-            self.setImage(UIImage.init(named: "listPlay"), forState: .Normal);
+            self.setImage(UIImage.init(named: "listPlay"), for: UIControlState());
         case 2:
-            self.setImage(UIImage.init(named: "replay"), forState: .Normal);
+            self.setImage(UIImage.init(named: "replay"), for: UIControlState());
         default:
             break;
         }
     }
     
-    func onMode(btn:ModeButton){
+    func onMode(_ btn:ModeButton){
         
     }
 }

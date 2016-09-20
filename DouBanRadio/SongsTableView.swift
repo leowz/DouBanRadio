@@ -14,7 +14,7 @@ class SongsTableView: UITableView {
     
     override func awakeFromNib() {
         print("init songsTableView")
-        self.backgroundColor = UIColor.clearColor();
+        self.backgroundColor = UIColor.clear;
         viewModel.view = self;
         self.delegate = viewModel;
         self.dataSource = viewModel;

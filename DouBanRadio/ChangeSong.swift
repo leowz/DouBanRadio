@@ -18,11 +18,11 @@ class ChangeSong: UIButton {
    
     override func awakeFromNib() {
 
-        self.addTarget(self, action: #selector(ChangeSong.onClick(_:)), forControlEvents: .TouchUpInside);
+        self.addTarget(self, action: #selector(ChangeSong.onClick(_:)), for: .touchUpInside);
 
     }
     //action for next/previous button
-    func onClick(btn:ChangeSong){
+    func onClick(_ btn:ChangeSong){
         viewModel.autoFinish = false;
         if btn.tag == 2 {
             viewModel.curIndex += 1;
