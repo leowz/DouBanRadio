@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
-import MediaPlayer
 
 class ViewController: UIViewController {
 

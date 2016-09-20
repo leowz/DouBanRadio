@@ -38,9 +38,9 @@ class PlayButton: UIButton {
     //action for play buttion
     func onPlay(_ btn:PlayButton){
         if btn.isPlaying{
-            viewModel.audioPlayer.play();
+            viewModel.audioPlayer?.play();
         }else{
-            viewModel.audioPlayer.pause();
+            viewModel.audioPlayer?.pause();
         }
     }
 }

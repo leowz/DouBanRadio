@@ -21,7 +21,7 @@ class HTTPController: NSObject{
         Alamofire.request(url).responseJSON{
         response in
 //            print("response is \(response)");
-            self.delegate?.didReceiveResults(response.result.value! as AnyObject);
+            self.delegate?.didReceiveResults(response.result.value as AnyObject);
         }
     }
         

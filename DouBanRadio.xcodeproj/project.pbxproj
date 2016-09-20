@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		500FD24E1D7F780100D81246 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FD24D1D7F780100D81246 /* PlayButton.swift */; };
 		500FD2521D80623900D81246 /* ModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500FD2511D80623900D81246 /* ModeButton.swift */; };
+		503E41721D91B4D400C32E06 /* radio.png in Resources */ = {isa = PBXBuildFile; fileRef = 503E41711D91B4D400C32E06 /* radio.png */; };
 		50B049251D722E8D009E8973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049241D722E8D009E8973 /* AppDelegate.swift */; };
 		50B049271D722E8D009E8973 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B049261D722E8D009E8973 /* ViewController.swift */; };
 		50B0492A1D722E8D009E8973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B049281D722E8D009E8973 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		3795CE2D5CDC55921E0FC579 /* Pods-DouBanRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouBanRadio.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouBanRadio/Pods-DouBanRadio.release.xcconfig"; sourceTree = "<group>"; };
 		500FD24D1D7F780100D81246 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		500FD2511D80623900D81246 /* ModeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeButton.swift; sourceTree = "<group>"; };
+		503E41711D91B4D400C32E06 /* radio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio.png; sourceTree = "<group>"; };
 		50B049211D722E8C009E8973 /* DouBanRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouBanRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B049241D722E8D009E8973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = DouBanRadio/AppDelegate.swift; sourceTree = "<group>"; };
 		50B049261D722E8D009E8973 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				50F704EC1D8FE2CC00312FBA /* back.png */,
 				50F704ED1D8FE2CC00312FBA /* list.png */,
 				50F704EE1D8FE2CC00312FBA /* listPlay.png */,
+				503E41711D91B4D400C32E06 /* radio.png */,
 				50F704EF1D8FE2CC00312FBA /* music.png */,
 				50F704F01D8FE2CC00312FBA /* next.png */,
 				50F704F11D8FE2CC00312FBA /* pause.png */,
@@ -369,6 +372,7 @@
 				50F704F61D8FE2CD00312FBA /* listPlay.png in Resources */,
 				50F704F51D8FE2CD00312FBA /* list.png in Resources */,
 				50F704FB1D8FE2CD00312FBA /* replay.png in Resources */,
+				503E41721D91B4D400C32E06 /* radio.png in Resources */,
 				50F704F91D8FE2CD00312FBA /* pause.png in Resources */,
 				50B0492F1D722E8D009E8973 /* LaunchScreen.storyboard in Resources */,
 				50B0492C1D722E8D009E8973 /* Assets.xcassets in Resources */,

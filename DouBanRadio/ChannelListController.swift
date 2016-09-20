@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
-import Alamofire
 
 protocol ChannelProtocol {
     //get channel id for delegate

@@ -12,8 +12,7 @@ import SwiftyJSON
 import MediaPlayer
 
 class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HTTPProtocol,ChannelProtocol {
-    //VM`s View target
-    weak var view :SongsTableView?;
+     weak var view :SongsTableView?;         //VM`s View target
     //background image
     weak var albumImageView :RoundImage?;
     //song progress bar
@@ -37,8 +36,8 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     //currentIndex
     var curIndex:Int = 0;
     //media player
-    var audioPlayer = MPMoviePlayerController();
-    
+    var audioPlayer:AVPlayer?;//MPMoviePlayerController();
+    var playerItem:AVPlayerItem?
     //timer for song intervals
     var timer:Timer?;
     //autoFinish Flag for mode algorthm,select song,next will are not autofinishs
@@ -138,9 +137,11 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     //Music play function
     func onSetAudio(_ url:String){
         //play music
-        self.audioPlayer.stop();
-        self.audioPlayer.contentURL = URL.init(string: url);
-        self.audioPlayer.play();
+        self.audioPlayer?.pause();
+        let nsURL = URL.init(string: url);
+        playerItem = AVPlayerItem.init(url: nsURL!);
+        self.audioPlayer = AVPlayer.init(playerItem: playerItem);
+        self.audioPlayer?.play();
         
         //set timer
         timer?.invalidate();
@@ -155,9 +156,9 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     //timer update function
         func onUpdate(){
             //get current music play time
-            let tTime = audioPlayer.duration;//totoal seconds
-            let playedTime = audioPlayer.currentPlaybackTime;
-            if tTime > 0.0 {
+            let tTime = CMTimeGetSeconds((playerItem?.duration)!);//totoal seconds
+            let playedTime = CMTimeGetSeconds((audioPlayer?.currentTime())!);
+            if tTime > 0{
                 //translate seconds into real time format
                 let realTime = Int(tTime) - Int(playedTime);
                 let seconds = realTime % 60 ;
@@ -183,15 +184,9 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
                 let ratio = CGFloat(playedTime/tTime);
                 //set progressBar
                 progressBar!.frame.size.width = view!.frame.width * ratio;
-            }
-            
-         
+            }        
         }
 
-
-    
-  
-    
     //functio for image cache
     func onGetImageCache(_ url:String,imgView:UIImageView){
         //check if the dic contains the image

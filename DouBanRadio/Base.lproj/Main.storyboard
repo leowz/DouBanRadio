@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Channel List Controller-->
@@ -15,34 +16,34 @@
                         <viewControllerLayoutGuide type="bottom" id="44L-zS-cfh"/>
                     </layoutGuides>
                     <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="Q6E-KN-6sd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4e-Et-5De">
-                                <rect key="frame" x="20" y="28" width="560" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LIST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4e-Et-5De">
+                                <frame key="frameInset" minX="20" minY="28" width="560" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2O6-MR-Nu8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I31-kL-r5i" customClass="ChannelListTableView" customModule="DouBanRadio" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="600" height="512"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I31-kL-r5i" customClass="ChannelListTableView" customModule="DouBanRadio" customModuleProvider="target">
+                                <frame key="frameInset" minY="88" width="600" height="512"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChannelCell" id="5TQ-kz-Zk1">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5TQ-kz-Zk1" id="7oD-ws-jGy">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <frame key="frameInset" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="S4e-Et-5De" firstAttribute="top" secondItem="CFy-Vz-DOs" secondAttribute="bottom" constant="8" id="9Fs-64-z3b"/>
                             <constraint firstItem="I31-kL-r5i" firstAttribute="top" secondItem="S4e-Et-5De" secondAttribute="bottom" constant="10" id="EeA-jd-nDo"/>
@@ -77,11 +78,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8x7-XX-qfK" customClass="BackGroundImageView" customModule="DouBanRadio" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="605" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8x7-XX-qfK" customClass="BackGroundImageView" customModule="DouBanRadio" customModuleProvider="target">
+                                <frame key="frameInset" width="605" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="LEe-TV-rt4"/>
                                     <constraint firstAttribute="height" constant="600" id="qZb-aQ-0KN"/>
@@ -93,17 +94,17 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7cc-Cm-Tdn" customClass="RoundImage" customModule="DouBanRadio" customModuleProvider="target">
-                                <rect key="frame" x="200" y="20" width="200" height="200"/>
-                                <color key="backgroundColor" red="1" green="0.1709827934" blue="0.36889109399999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cc-Cm-Tdn" customClass="RoundImage" customModule="DouBanRadio" customModuleProvider="target">
+                                <frame key="frameInset" minX="200" minY="20" width="200" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.1709827934" blue="0.36889109399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Kx0-JL-BBi"/>
                                     <constraint firstAttribute="height" constant="200" id="tPy-du-p1x"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fyo-bR-Us0" customClass="StaticCircleView" customModule="DouBanRadio" customModuleProvider="target">
-                                <rect key="frame" x="265" y="85" width="70" height="70"/>
-                                <color key="backgroundColor" red="0.74875710230000003" green="0.74875710230000003" blue="0.74875710230000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyo-bR-Us0" customClass="StaticCircleView" customModule="DouBanRadio" customModuleProvider="target">
+                                <frame key="frameInset" minX="265" minY="85" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.74875710230000003" green="0.74875710230000003" blue="0.74875710230000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="OML-kr-UcS"/>
                                     <constraint firstAttribute="width" constant="70" id="itL-qc-IKP"/>
@@ -115,36 +116,35 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AS-7O-JkI" customClass="TimeLabelView" customModule="DouBanRadio" customModuleProvider="target">
-                                <rect key="frame" x="265" y="110" width="70" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AS-7O-JkI" customClass="TimeLabelView" customModule="DouBanRadio" customModuleProvider="target">
+                                <frame key="frameInset" minX="265" minY="110" width="70" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="JWA-XD-KD8"/>
                                     <constraint firstAttribute="height" constant="20" id="zl6-KJ-gWN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.96194814019999997" green="1" blue="0.94179147689999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.96194814019999997" green="1" blue="0.94179147689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-kK-Hfg">
-                                <rect key="frame" x="0.0" y="250" width="600" height="51"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-kK-Hfg">
+                                <frame key="frameInset" minY="250" width="600" height="51"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="x50-i8-6Q5"/>
                                 </constraints>
                             </imageView>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pd-Ux-f0g">
-                                <rect key="frame" x="0.0" y="250" width="600" height="51"/>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Pd-Ux-f0g">
+                                <frame key="frameInset" minY="250" width="600" height="51"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAq-fX-1ne" customClass="SongProgressBar" customModule="DouBanRadio" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="3" width="0.0" height="45"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="TwH-6i-c8q"/>
                                             <constraint firstAttribute="width" id="rCt-Cf-zNV"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="FAq-fX-1ne" firstAttribute="top" secondItem="1Pd-Ux-f0g" secondAttribute="top" constant="3" id="5Gw-lZ-bGr"/>
                                     <constraint firstItem="FAq-fX-1ne" firstAttribute="leading" secondItem="1Pd-Ux-f0g" secondAttribute="leading" id="KAf-EM-1iE"/>
@@ -157,17 +157,17 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRe-6X-pcu" customClass="PlayButton" customModule="DouBanRadio" customModuleProvider="target">
-                                <rect key="frame" x="280" y="255" width="40" height="40"/>
+                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRe-6X-pcu" customClass="PlayButton" customModule="DouBanRadio" customModuleProvider="target">
+                                <frame key="frameInset" minX="280" minY="255" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4Dv-2T-U8x"/>
                                     <constraint firstAttribute="height" constant="40" id="Aee-Sz-a35"/>
                                     <constraint firstAttribute="width" constant="49" id="WFP-UQ-e2a"/>
                                     <constraint firstAttribute="width" constant="40" id="w9I-ov-QEH"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="play.png">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -176,17 +176,17 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpF-Cx-M1U" customClass="ChangeSong" customModule="DouBanRadio" customModuleProvider="target">
-                                <rect key="frame" x="205" y="255" width="40" height="40"/>
+                            <button tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpF-Cx-M1U" customClass="ChangeSong" customModule="DouBanRadio" customModuleProvider="target">
+                                <frame key="frameInset" minX="205" minY="255" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="59" id="HiZ-vY-Kro"/>
                                     <constraint firstAttribute="width" constant="40" id="Tp2-GB-m3r"/>
                                     <constraint firstAttribute="height" constant="25" id="U35-EB-0bf"/>
                                     <constraint firstAttribute="height" constant="40" id="auw-ru-TQD"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="back.png">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -195,17 +195,17 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iL-ne-EOE">
-                                <rect key="frame" x="550" y="255" width="40" height="40"/>
+                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iL-ne-EOE">
+                                <frame key="frameInset" minX="550" minY="255" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="Z32-vH-Cs2"/>
                                     <constraint firstAttribute="width" constant="40" id="eEb-5L-mbf"/>
                                     <constraint firstAttribute="height" constant="40" id="sHq-BM-l7A"/>
                                     <constraint firstAttribute="height" constant="25" id="wpp-SQ-0U5"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="list.png">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -218,16 +218,15 @@
                                 </connections>
                             </button>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfL-RI-3Da" customClass="ModeButton" customModule="DouBanRadio" customModuleProvider="target">
-                                <rect key="frame" x="15" y="255" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="3gA-qv-gQc"/>
                                     <constraint firstAttribute="width" constant="40" id="7TA-X4-wRy"/>
                                     <constraint firstAttribute="height" constant="40" id="B7m-zj-hLf"/>
                                     <constraint firstAttribute="height" constant="80" id="MeM-lY-QYw"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="music.png">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -236,17 +235,17 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTr-e0-YcR" customClass="ChangeSong" customModule="DouBanRadio" customModuleProvider="target">
-                                <rect key="frame" x="355" y="255" width="40" height="40"/>
+                            <button tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTr-e0-YcR" customClass="ChangeSong" customModule="DouBanRadio" customModuleProvider="target">
+                                <frame key="frameInset" minX="355" minY="255" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="S3B-Ct-25O"/>
                                     <constraint firstAttribute="width" constant="40" id="T2m-4L-Lo6"/>
                                     <constraint firstAttribute="height" constant="40" id="hxD-uo-6zc"/>
                                     <constraint firstAttribute="width" constant="35" id="m3k-5m-7PW"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="next.png">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -255,29 +254,29 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Poj-MB-ixM" customClass="SongsTableView" customModule="DouBanRadio" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="306" width="605" height="294"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Poj-MB-ixM" customClass="SongsTableView" customModule="DouBanRadio" customModuleProvider="target">
+                                <frame key="frameInset" minY="306" width="605" height="294"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="song" textLabel="2WX-P4-e6o" detailTextLabel="rzo-XP-0y6" style="IBUITableViewCellStyleSubtitle" id="2yr-NR-uvf">
                                         <rect key="frame" x="0.0" y="28" width="605" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2yr-NR-uvf" id="FvQ-yA-5Mg">
-                                            <rect key="frame" x="0.0" y="0.0" width="605" height="43.5"/>
+                                            <frame key="frameInset" width="605" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2WX-P4-e6o">
-                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                                    <frame key="frameInset" minX="15.000000000000002" minY="6" width="31.666666666666668" height="19.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rzo-XP-0y6">
-                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                                    <frame key="frameInset" minX="14.999999999999996" minY="25.333333333333332" width="40.666666666666664" height="13.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -286,7 +285,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7cc-Cm-Tdn" firstAttribute="centerX" secondItem="uRe-6X-pcu" secondAttribute="centerX" id="1mM-0p-xP4"/>
                             <constraint firstItem="1Pd-Ux-f0g" firstAttribute="bottom" secondItem="hN3-kK-Hfg" secondAttribute="bottom" id="497-Z9-CBE"/>
@@ -421,10 +420,10 @@
                                 <exclude reference="v3G-kt-9Qa"/>
                                 <exclude reference="vRc-dR-hcZ"/>
                                 <exclude reference="Iid-Tc-Qv4"/>
-                                <exclude reference="pRS-99-eq3"/>
                                 <exclude reference="8Fj-fJ-LyZ"/>
                                 <exclude reference="Kaj-Go-q49"/>
                                 <exclude reference="NjL-Iz-LpY"/>
+                                <exclude reference="pRS-99-eq3"/>
                             </mask>
                         </variation>
                     </view>

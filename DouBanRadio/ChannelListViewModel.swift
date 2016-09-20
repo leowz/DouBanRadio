@@ -63,7 +63,6 @@ class ChannelListViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,H
         delegate.onChangeChannel(channel_id);
         //dismiss current controller
         self.view!.controller!.dismiss(animated: true, completion: nil);
-//        controllerDismissDelegate?.onDismissChannel();
     }
     // set cell display animation
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
