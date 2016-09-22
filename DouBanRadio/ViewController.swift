@@ -22,7 +22,21 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   // blur effect
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.beginReceivingRemoteControlEvents();
+        self.becomeFirstResponder();
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        UIApplication.shared.endReceivingRemoteControlEvents();
+        self.resignFirstResponder();
+    }
+    
+//    override func becomeFirstResponder() -> Bool
+//    {
+//        return true;
+//    }
+
+    // blur effect
     func backgroundBlur(){
         //set blurEffet
         let blurEffect = UIBlurEffect.init(style: UIBlurEffectStyle.light);

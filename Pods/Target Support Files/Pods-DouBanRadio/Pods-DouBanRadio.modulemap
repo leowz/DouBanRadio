@@ -1,0 +1,6 @@
+framework module Pods_DouBanRadio {
+  umbrella header "Pods-DouBanRadio-umbrella.h"
+
+  export *
+  module * { export * }
+}

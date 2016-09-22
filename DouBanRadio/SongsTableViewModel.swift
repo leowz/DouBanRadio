@@ -36,7 +36,7 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     //currentIndex
     var curIndex:Int = 0;
     //media player
-    var audioPlayer:AVPlayer?;//MPMoviePlayerController();
+    var audioPlayer:AVPlayer?;
     var playerItem:AVPlayerItem?
     //timer for song intervals
     var timer:Timer?;
@@ -45,18 +45,11 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
     
     override init() {
         super.init();
-
-        
         IHttp.delegate = self;
         //get sons in channel 0
         IHttp.onSearch(songsInChannel0);
-        //set audio control button
- 
-        
-
-
          //notification when song finishes playing
-        NotificationCenter.default.addObserver(self, selector: #selector(SongsTableViewModel.playFinish), name:NSNotification.Name.MPMoviePlayerPlaybackDidFinish , object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(SongsTableViewModel.playFinish), name:NSNotification.Name.AVPlayerItemDidPlayToEndTime , object: nil);
     }
     //alogrithm of play mode when songs autofinished
         func playFinish(){

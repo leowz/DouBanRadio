@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,9 +22,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        //开启后台处理多媒体事件
+        //[[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+        UIApplication.shared.beginReceivingRemoteControlEvents();
+        let session = AVAudioSession.sharedInstance();
+        do {try session.setActive(true);
+        }catch{
+        }
+        //后台播放
+        do {try session.setCategory(AVAudioSessionCategoryPlayback);
+        }catch{
+        }
+        //这样做，可以在按home键进入后台后 ，播放一段时间，几分钟吧。但是不能持续播放网络歌曲，若需要持续播放网络歌曲，还需要申请后台任务id，具体做法是：
+        let _bgTaskId = UIBackgroundTaskInvalid;
+        var bgTaskId = AppDelegate.backgroundPlayerID(backTaskId: _bgTaskId);
+//        其中的_bgTaskId是后台任务UIBackgroundTaskIdentifier _bgTaskId;
+        
+    
     }
+    //实现一下backgroundPlayerID:这个方法:
+    class func backgroundPlayerID(backTaskId:UIBackgroundTaskIdentifier) ->UIBackgroundTaskIdentifier
+    {
+    //设置并激活音频会话类别
+    let session=AVAudioSession.sharedInstance();
+        do {
+            try session.setCategory(AVAudioSessionCategoryPlayback)
+        }catch{
+        };
+        do {try session.setActive(true)
+        }catch{
+        };
+    //允许应用程序接收远程控制
+   UIApplication.shared.beginReceivingRemoteControlEvents();
+    //设置后台任务ID
+    var  newTaskId = UIBackgroundTaskInvalid;
+         newTaskId = UIApplication.shared.beginBackgroundTask(expirationHandler: nil);
+        
+    if(newTaskId != UIBackgroundTaskInvalid && backTaskId != UIBackgroundTaskInvalid)
+    {
+    UIApplication.shared.endBackgroundTask(backTaskId);
+    }
+    return newTaskId;
+    }
+    
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.

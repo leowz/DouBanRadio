@@ -21,7 +21,7 @@ class PlayButton: UIButton {
 
     }
     
-     @objc fileprivate func onClick(){
+     func onClick(){
         isPlaying = !isPlaying;
         if isPlaying{
             
