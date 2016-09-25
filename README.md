@@ -15,12 +15,15 @@ DouBanRadio is an online streaming radio app adapting DouBanMusic API to provide
 ------------------------------------------
 
 #### Introduction
+
 DouBanRadio implement DouBanMusic API to provide quality straming music service. This is  a prototype app. It can play streaming music from the service, get certains information about the music been playing, list out certains music channels and the music in those channels, playing music in background and so on.
+
 ---
 >   
 ![video1](video1.gif);  ![video2](video2.gif)
 >
 ---
+
 #### APP Behaviour
 The basic APP behaviour goes as follows:
   1. when app is launched the defaut channel are load with songs in it, Music play controller appears. On select any songs in music play table view, the song plays immediately. Album image of this song are load on the background image and on the Album image view. Album image view starts to rotate and time label starts to back play the duration of the song.
