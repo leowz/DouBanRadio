@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     
 //MARK:- Functions
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        backgroundBlur();
+      super.viewDidLoad();
+      backgroundBlur();
+      
     }
     
     override func didReceiveMemoryWarning() {
