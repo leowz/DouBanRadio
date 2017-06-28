@@ -38,9 +38,11 @@ class PlayButton: UIButton {
     //action for play buttion
     func onPlay(_ btn:PlayButton){
         if btn.isPlaying{
-            viewModel.audioPlayer?.play();
+            viewModel.audioPlayer?.play()
+            viewModel.albumImageView?.resumeAnimation()
         }else{
-            viewModel.audioPlayer?.pause();
+            viewModel.audioPlayer?.pause()
+            viewModel.albumImageView?.pauseAnimation()
         }
     }
 }

@@ -24,9 +24,6 @@ class HTTPController: NSObject{
             self.delegate?.didReceiveResults(response.result.value as AnyObject);
         }
     }
-        
-        
-    
 }
 
 //HTTP protocol

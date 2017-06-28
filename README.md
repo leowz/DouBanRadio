@@ -6,9 +6,11 @@
 DouBanRadio is an online streaming radio app adapting DouBanMusic API to provide quality online streaming music service.
 
 # Contents
-[TOC]
+[Introduction](#Introduction)
+[App Behaviour](#APP Behaviour)
 
 ------------------------------------------
+
 
 # Introduction
 
@@ -19,6 +21,7 @@ DouBanRadio implement DouBanMusic API to provide quality straming music service.
 ![video1](video1.gif);  ![video2](video2.gif)
 >
 ---
+
 
 # APP Behaviour
 The basic APP behaviour goes as follows:

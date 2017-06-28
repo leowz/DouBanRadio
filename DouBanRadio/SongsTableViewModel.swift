@@ -83,9 +83,11 @@ class SongsTableViewModel: NSObject,UITableViewDelegate,UITableViewDataSource,HT
         print("didReceiveResults");
         let json = JSON(results); //data into json format
         if let songs = json["song"].array{
-            print("reloadData");
-            self.songsInTable = songs;
-            self.view!.reloadData();
+            print("reloadData")
+            self.songsInTable = songs
+            OperationQueue.main.addOperation {
+                self.view!.reloadData()
+            }
         }
     }
     

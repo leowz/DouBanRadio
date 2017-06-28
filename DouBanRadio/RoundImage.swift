@@ -29,13 +29,26 @@ class RoundImage: UIImageView {
         //get animation
         let animation = CABasicAnimation(keyPath: "transform.rotation");
         //set animation
-        animation.fromValue = 0.0;
-        animation.toValue = M_PI * 2.0; //rotate from 0 to 2pi
-        animation.duration = 20;//every 20s to rotate from 0 to 2pi
-        animation.repeatCount = 10000;
+        animation.fromValue = 0.0
+        animation.toValue = CGFloat.pi * 2.0 //rotate from 0 to 2pi
+        animation.duration = 20//every 20s to rotate from 0 to 2pi
+        animation.repeatCount = 10000
         
-        self.layer.add(animation, forKey: nil);
+        layer.add(animation, forKey: nil)
     }
-
-
+    
+    func pauseAnimation(){
+        var pausedTime = layer.convertTime(CACurrentMediaTime(), from: nil)
+        layer.speed = 0.0
+        layer.timeOffset = pausedTime
+    }
+    
+    func resumeAnimation(){
+        var pausedTime = layer.timeOffset
+        layer.speed = 1.0
+        layer.timeOffset = 0.0
+        layer.beginTime = 0.0
+        let timeSincePause = layer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
+        layer.beginTime = timeSincePause
+    }
 }

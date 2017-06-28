@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DouBanRadio/songsTableViewModel.swift"
-            timestampString = "496089145.46961"
+            timestampString = "520360026.295313"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "onChangeChannel(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DouBanRadio/songsTableViewModel.swift"
-            timestampString = "496089145.46961"
+            timestampString = "520360026.295313"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "onChangeChannel(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -194,11 +194,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DouBanRadio/HttpController.swift"
-            timestampString = "495710158.08202"
+            timestampString = "520359806.774412"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "HTTPProtocol"
             landmarkType = "5">
          </BreakpointContent>
@@ -322,11 +322,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DouBanRadio/SongsTableViewModel.swift"
-            timestampString = "496089145.46961"
+            timestampString = "520360026.295313"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "onSetAudio(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -345,6 +345,69 @@
             endingLineNumber = "24"
             landmarkName = "remoteControlReceived(with:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DouBanRadio/SongsTableViewModel.swift"
+            timestampString = "508869472.41374"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "SongsTableViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DouBanRadio.SongsTableViewModel.curIndex.getter : Swift.Int"
+                  moduleName = "DouBanRadio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wengzhang/Documents/workspace/DouBanRadio/DouBanRadio/SongsTableViewModel.swift"
+                  timestampString = "508869476.883931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DouBanRadio.SongsTableViewModel.curIndex.setter : Swift.Int"
+                  moduleName = "DouBanRadio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wengzhang/Documents/workspace/DouBanRadio/DouBanRadio/SongsTableViewModel.swift"
+                  timestampString = "508869476.888228"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DouBanRadio.SongsTableViewModel.init () -&gt; DouBanRadio.SongsTableViewModel"
+                  moduleName = "DouBanRadio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wengzhang/Documents/workspace/DouBanRadio/DouBanRadio/SongsTableViewModel.swift"
+                  timestampString = "508869476.893105"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "737">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
